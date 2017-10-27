@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="espot">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <!-- <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script> -->
+    <!-- <script src="https://code.angularjs.org/1.6.5/angular-animate.min.js"></script> -->
+    <script src="js/app.js"></script>
+<!--     <script src="js/nav.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/capabilities.js"></script>
+    <script src="js/clients.js"></script>
+    <script src="js/contacts.js"></script>
+    <script src="js/partners.js"></script>
+    <script src="js/works.js"></script>
+    <script src="js/mobile_menu.js"></script> -->
+    
+    <link href="css/style.css" rel="stylesheet">
+    <title></title>
+    <!-- <title>{{title}}</title> -->
+</head>
+
+<body>
+    <div class="search_field">
+        <input id="findCity_input" class="controls" type="text" placeholder="Search Box">
+    </div>
+    <ng-include src="'views/templates/header.html'"></ng-include>
+    <ng-include src="'views/pages/index/s1.html'"></ng-include>
+    <!-- <ng-include src="'views/popups/mobile-menu.html'"></ng-include> -->
+<!--     <div class="content-wrapper">
+        <div class="content" ng-class="{back: back}">
+            <div class="loddingSvg">
+                <img id="loader" src="" alt="">
+            </div>
+            <ng-view class="slide-in-right-out-left"></ng-view>
+        </div>
+        <ng-include src="'views/footer.html'"></ng-include>
+    </div> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnYGKIPOYed3bRlJ_k9Z-hXa8TFr_r7Bg&libraries=places&language=en&callback=initAutocomplete" async defer></script>
+    <script src="js/events.js"></script>
+
+    <script>
+         function initAutocomplete() {
+            var input = document.getElementById('findCity_input');
+            var searchbox = new google.maps.places.SearchBox(input, {types: ['(cities)']});
+            //var autocomplete = new google.maps.places.Autocomplete(input);
+            /*
+            var searchbox = new google.maps.places.Autocomplete(input, {
+                componentRestrictions: { country: 'fr' }
+            });
+            */
+            
+
+            google.maps.event.addListener(searchbox, 'places_changed', function () {
+                var placeInfo = searchbox.getPlaces();
+                
+                var place = new Object;
+                place.viewport = new Object;
+                place.geometry = new Object;
+                place.place_id = placeInfo[0].place_id;
+                place.vicinity = placeInfo[0].vicinity;
+                place.name = placeInfo[0].name;
+                place.formatted_address = placeInfo[0].formatted_address;
+                place.viewport.sw = {'Lat': placeInfo[0].geometry.viewport.f.b, 'Lng':placeInfo[0].geometry.viewport.b.b};
+                place.viewport.ne = {'Lat': placeInfo[0].geometry.viewport.f.f, 'Lng':placeInfo[0].geometry.viewport.b.f};
+                place.geometry.lat = placeInfo[0].geometry.location.lat();
+                place.geometry.lng = placeInfo[0].geometry.location.lng();
+                console.log(place);
+                $('.btn-place-s-txt').text(place.name);
+                $('.btn-place-next').addClass('active');
+                $('#findCity_input').blur();
+                $('.search_field').removeClass('show-search_field');
+                /*
+                var service = new google.maps.places.PlacesService(input);
+                var request = {
+                  placeId: place.place_id
+                };
+
+                service.getDetails(request, getDetails);
+
+                function getDetails (place, status) {
+                    console.log(place);
+                }
+                */
+            });
+
+
+
+            /*var viewport = new google.maps.LatLngBounds(
+                new google.maps.LatLng(southLat, westLng),
+                new google.maps.LatLng(northLat, eastLng)
+            );*/
+         }
+    </script>
+</body>
+
+</html>

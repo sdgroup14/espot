@@ -1,0 +1,348 @@
+@import "libs/_elements";
+@import "libs/_blank";
+@import "libs/_fsize";
+
+
+/*
+================================================================================
+|                                     reset                                     |
+================================================================================
+*/
+
+@import "libs/_reset";
+
+
+/*
+================================================================================
+|                                     Fonts                                    |
+================================================================================
+*/
+
+@import "libs/_fonts";
+
+
+/*
+================================================================================
+|                                     Start rools                              |
+================================================================================
+*/
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+body {
+    margin: 0 auto;
+    // font-family: Arial, sans-serif;
+}
+
+section,
+header {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 506px;
+}
+
+// .content {
+//     width: 100%;
+//     min-height: 100%;
+//     padding-bottom: 92px;
+//     background-color: $white-d;
+// }
+
+.container {
+    // max-width: 1024px;
+    padding: 0 6px;
+    width: 100%;
+    margin: 0 auto;
+    // overflow: hidden;
+    // position: relative;
+}
+
+// .body {
+    
+//     &.active{
+//       overflow: hidden;  
+//     }
+// }
+
+// .global-hide {
+//     transition: all .17s ease-in;
+//     transform: scale(.8);
+//     opacity: 0;
+// }
+
+// .global-show {
+//     transform: scale(1);
+//     opacity: 1;
+// }
+
+// .br768,
+// .br320 {
+//     display: none;
+// }
+
+
+// .r-animate {
+//     &.ng-animate {
+//         transition: all ease 0.2s;
+//         position: absolute;
+//     }
+//     &.ng-enter,
+//     &.ng-leave {
+//         left: 0;
+//         right: 0;
+//         transition: all .3s ease-in-out;
+//     }
+//     &.ng-enter {
+//         opacity: 0;
+//     }
+//     &.ng-enter-active {
+//         opacity: 1;
+//     }
+//     &.ng-leave {
+//         opacity: 1;
+//     }
+//     &.ng-leave-active {
+//         opacity: 0;
+//     }
+// }
+// .r-animate-to-left {
+//     &.ng-animate {
+//         transition: all ease 0.2s;
+//         position: absolute;
+
+//     }
+//     &.ng-enter,
+//     &.ng-leave {
+//         width: 100%;
+//         height: 100%;
+//         transition: all .7s ease;
+//     }
+//     &.ng-enter {
+//         opacity: 0;
+//         transform: translateX(70px);
+//     }
+//     &.ng-enter-active {
+//         opacity: 1;
+//         transform: translateX(0);
+//     }
+//     &.ng-leave {
+//         opacity: 1;
+//         transform: translateX(0);
+//     }
+//     &.ng-leave-active {
+//         opacity: 0;
+//         transform: translateX(-70px);
+//     }
+// }
+
+// .r-animate-to-right {
+//     &.ng-animate {
+//         transition: all ease 0.2s;
+//         position: absolute;
+
+//     }
+
+//     &.ng-enter,
+//     &.ng-leave {
+//         width: 100%;
+//         height: 100%;
+//         transition: all .7s ease;
+//     }
+//     &.ng-enter {
+//         opacity: 0;
+//         transform: translateX(-70px);
+//     }
+//     &.ng-enter-active {
+//         opacity: 1;
+//         transform: translateX(0);
+//     }
+//     &.ng-leave {
+//         opacity: 1;
+//         transform: translateX(0);
+//     }
+//     &.ng-leave-active {
+//         opacity: 0;
+//         transform: translateX(70px);
+//     }
+// }
+// .slide-in-left-out-right,
+// .slide-in-right-out-left{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+// }
+
+// .slide-in-left-out-right.ng-hide-add-active,
+// .slide-in-left-out-right.ng-leave,
+// .back .slide-in-right-out-left.ng-hide-add-active,
+// .back .slide-in-right-out-left.ng-leave {
+//   animation: slideOutRight 0.2s ease;
+// }
+
+// .slide-in-left-out-right.ng-hide-remove-active,
+// .slide-in-left-out-right.ng-enter,
+// .back .slide-in-right-out-left.ng-hide-remove-active,
+// .back .slide-in-right-out-left.ng-enter {
+//   animation: slideInLeft 0.2s ease;
+// }
+
+// .slide-in-right-out-left.ng-hide-add-active,
+// .slide-in-right-out-left.ng-leave,
+// .back .slide-in-left-out-right.ng-hide-add-active,
+// .back .slide-in-left-out-right.ng-leave {
+//   animation: slideOutLeft 0.2s ease;
+// }
+
+// .slide-in-right-out-left.ng-hide-remove-active,
+// .slide-in-right-out-left.ng-enter,
+// .back .slide-in-left-out-right.ng-hide-remove-active,
+// .back .slide-in-left-out-right.ng-enter {
+//   animation: slideInRight 0.2s ease;
+// }
+
+// @keyframes slideOutLeft {
+//   0% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateX(-70px);
+//   }
+// }
+
+
+
+// @keyframes slideOutRight {
+//   0% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateX(70px);
+//   }
+// }
+
+
+
+// @keyframes slideInRight {
+//   0% {
+//     transform: translateX(70px);
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
+
+
+
+// @keyframes slideInLeft {
+//   0% {
+//     transform: translateX(-70px);
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
+
+// .loddingSvg {
+//   position: fixed;
+//   left: 50%;
+//   top: 50%;
+//   margin-left: -250px;
+//   margin-top: -50px;
+//   width: 500px;
+//   height: 100px;
+//   z-index: 9999;
+//   transition: all .15s ease-in-out;
+
+//   img {
+//     width: 500px;
+//     height: 100px;
+//     fill: #021e34;
+//   }
+// }
+
+     .search_field {
+            position: absolute;
+            top: 5px;
+            left: 6px;
+            right: 6px;
+            z-index: 100;
+            transform: translate3d(0, -200px, 0);
+            opacity: 0;
+            visibility:hidden;
+            transition: all .3s linear;
+            will-change: transform;
+
+            &.show-search_field {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+                visibility:visible;
+            }
+        }
+        #findCity_input {
+            display: block;
+            background-color: #fff;
+            margin: 0 auto;
+            font-size: 15px;
+            padding: 0 11px 0 13px;
+            text-overflow: ellipsis;
+            width: 100%;
+            height: 48px;
+            background: #FFFFFF;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
+        }
+        .pac-logo:after {
+            display: none;
+        }
+        .pac-container {
+            border-radius: 3px;
+        }
+        .pac-item {
+            line-height: 37px;
+            border: none;
+        }
+        .pac-icon {
+            margin-top: 9px;
+        }
+        .pac-item:hover {
+
+        }
+        .pac-item-selected {
+
+        }
+
+
+@import "content/templates/header";
+@import "content/pages/index/s1";
+
+
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) and (min-width: 550px) {
+}

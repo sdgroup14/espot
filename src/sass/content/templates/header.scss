@@ -1,0 +1,48 @@
+header {
+  height: 51px;
+  position: relative;
+
+  .logo {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate3d(0, 0, 0);
+    transition: transform .5s ease-in-out, right .5s ease-in-out,;
+    will-change: transform;
+
+    svg {
+      display: inline-block;
+      transition: width .5s linear, height .5s linear;
+    }
+
+    .icon-svg-logo-part-1 {
+      width: 24px;
+      height: 27px;
+      fill: #ffc300;
+    }
+    .icon-svg-logo-part-2 {
+      width: 39px;
+      height: 12px;
+      margin: 5px 0 0 4px;
+      fill: #CACCD1;
+    }
+
+    &.start-page-logo {
+      right: 50%;
+      transform: translate3d(50%, 57%, 0);
+
+
+      .icon-svg-logo-part-1 {
+        width: 65px;
+        height: 71px;
+      }
+      .icon-svg-logo-part-2 {
+        width: 104px;
+        height: 32px;
+      }
+    }
+  }
+}

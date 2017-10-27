@@ -1,0 +1,111 @@
+.index-s1 {
+  padding: 119px 0 35px;
+  text-align: center;
+  position: static;
+
+  .login-header {
+    @extend %sb;
+    font-size: 13px;
+    letter-spacing: 0.13px;
+    text-transform: uppercase;
+    color: #CACCD1;
+    margin-bottom: 20px;
+  }
+  .authorization-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 168px;
+    margin: 0 auto 47px;
+  }
+
+  .btn-place-serch {
+    width: 178px;
+    height: 37px;
+    background: #FFFFFF;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 20px;
+  }
+
+  .btn-place-s-txt {
+    @extend %sl;
+    font-size: 15px;
+    letter-spacing: 0.38px;
+    color: #757A80;
+  }
+
+  .btn-place-next {
+    position: relative;
+    width: 178px;
+    height: 37px;
+    background: #FFC300;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .15s ease-in-out;
+    &.active {
+      opacity: 1;
+    visibility: visible;
+    }
+  }
+
+  .btn-place-s-txt-1 {
+    @extend %sl;
+    font-size: 15px;
+    letter-spacing: 0.38px;
+    color: #FFFFFF;
+  }
+
+  .icon-svg-arr-next {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9.6px;
+    height: 16.5px;
+    fill: #ffffff;
+  }
+
+  .icon-svg-serch {
+    width: 16.8px;
+    height: 16.8px;
+    fill: #D6D9DE;
+    margin: 0 10px;
+  }
+
+  .back-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    @extend %sm;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.15px;
+    color: #D6D9DE;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .icon-svg-arr-back {
+    display: inline-block;
+    vertical-align: middle;
+    width: 7.5px;
+    height: 15px;
+    fill: #D6D9DE;
+    margin-right: 5px;
+  }
+}

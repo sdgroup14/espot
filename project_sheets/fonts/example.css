@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'SFPDisplayMedium';
+    src: url('fonts/SFPDisplayMedium.eot');
+    src: url('fonts/SFPDisplayMedium.eot') format('embedded-opentype'),
+         url('fonts/SFPDisplayMedium.woff2') format('woff2'),
+         url('fonts/SFPDisplayMedium.woff') format('woff'),
+         url('fonts/SFPDisplayMedium.ttf') format('truetype'),
+         url('fonts/SFPDisplayMedium.svg#SFPDisplayMedium') format('svg');
+}
