@@ -382,10 +382,10 @@ header {
     will-change: transform; }
     header .logo svg {
       display: inline-block;
-      -webkit-transition: width .5s linear, height .5s linear;
-      -o-transition: width .5s linear, height .5s linear;
-      -moz-transition: width .5s linear, height .5s linear;
-      transition: width .5s linear, height .5s linear; }
+      -webkit-transition: width .5s ease-in-out, height .5s ease-in-out;
+      -o-transition: width .5s ease-in-out, height .5s ease-in-out;
+      -moz-transition: width .5s ease-in-out, height .5s ease-in-out;
+      transition: width .5s ease-in-out, height .5s ease-in-out; }
     header .logo .icon-svg-logo-part-1 {
       width: 24px;
       height: 27px;
@@ -410,7 +410,33 @@ header {
 .index-s1 {
   padding: 119px 0 35px;
   text-align: center;
-  position: static; }
+  position: static;
+  overflow: hidden; }
+  .index-s1 .container {
+    max-width: 320px;
+    overflow: hidden; }
+  .index-s1 .steps-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 200%; }
+    .index-s1 .steps-wrapper .first-step-auth, .index-s1 .steps-wrapper .second-step-auth {
+      width: 308px;
+      -webkit-transition: -webkit-transform .2s ease-in-out;
+      transition: -webkit-transform .2s ease-in-out;
+      -o-transition: -o-transform .2s ease-in-out;
+      -moz-transition: transform .2s ease-in-out, -moz-transform .2s ease-in-out;
+      transition: transform .2s ease-in-out;
+      transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out, -moz-transform .2s ease-in-out, -o-transform .2s ease-in-out;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+      .index-s1 .steps-wrapper .first-step-auth.active, .index-s1 .steps-wrapper .second-step-auth.active {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -moz-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0); }
   .index-s1 .login-header {
     font-size: 13px;
     letter-spacing: 0.13px;

@@ -5,11 +5,16 @@ $(document).on('click', function(e) {
   }
 });
 
-$('body').on('click', '.btn-place-serch', function() {
+$('body').on('click', '.btn-place-search', function() {
   setTimeout(function() {
     $('.search_field').addClass('show-search_field');
     setTimeout(function() {
       $('#findCity_input').focus();
     }, 333)
   }, 1)
+});
+
+$('body').on('click', '.btn-place-next', function(){
+  console.log('123');
+  $('.first-step-auth, .second-step-auth').addClass('active');
 });

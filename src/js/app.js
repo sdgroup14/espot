@@ -1,34 +1,60 @@
-// var states = ['AboutCtrl', 'CapabilitiesCtrl', 'ClientsCtrl', 'ContactsCtrl', 'PartnersCtrl', 'WorksCtrl'];
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
+  angular
     .module('espot', [
-        // 'ngRoute',
-        // 'ngAnimate'
-        // 'icreations.nav',
-        // 'icreations.about',
-        // 'icreations.capabilities',
-        // 'icreations.clients',
-        // 'icreations.contacts',
-        // 'icreations.partners',
-        // 'icreations.works',
-        // 'icreations.mob_menu'
+      'ui.router',
+      'ngAnimate',
+      'espot.index',
+      'espot.search',
+      'espot.kitchen'
     ])
+    .controller('AppCtrl', AppCtrl)
     .config(Config);
 
-    // Config.$inject = ['$routeProvider', '$locationProvider'];
+  AppCtrl.$inject = ['$scope', '$rootScope', '$timeout'];
 
-    // function Config($routeProvider, $locationProvider) {
-    function Config() {
-        // $routeProvider.
-        // otherwise({ redirectTo: '/about' });
+  function AppCtrl($scope, $rootScope, $timeout) {
 
-        // $locationProvider.html5Mode({
-        //   enabled: true,
-        //   requireBase: false
-        // });
+    //         $timeout(function(){
+    //    $('nav').removeClass('nav-show');
+    //   $('.logo').removeClass('start-page-logo');
+    //   $('.page-title').removeClass('active');
+    //   }, 500);
 
-    };
+
+    // $rootScope.$on('$locationChangeStart', function(evt) {
+    //   console.log(evt);
+    // });
+
+    //     $rootScope.$on('$locationChangeSuccess', function(evt) {
+    //   $timeout(function(){
+    //    $('nav').removeClass('nav-show');
+    //   $('.logo').removeClass('start-page-logo');
+    //   $('.page-title').removeClass('active');
+    //   }, 500);
+    // });
+
+
+  };
+
+  Config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+
+  function Config($stateProvider, $urlRouterProvider, $locationProvider) {
+$urlRouterProvider.otherwise('/');
+    $stateProvider
+      .state('root', {
+        url: '/',
+        // templateUrl: '../views/pages/index/s1.html',
+        controller: AppCtrl,
+        redirectTo: 'index'
+      });
+
+    
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
+  };
 
 })();

@@ -1,21 +1,45 @@
 header {
-  height: 51px;
-  position: relative;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow:hidden;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        height: 48px;
+    padding: 0 15px;
+  }
+
+  .page-title {
+    color: #54D6F0;
+    @extend %sm;
+    font-size : 13px;
+    letter-spacing : 0.13px;
+    text-transform : uppercase;
+    color : #54D6F0;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      opacity: 1;
+    visibility: visible;
+    }
+  }
 
   .logo {
-    position: absolute;
-    top: 11px;
-    right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate3d(0, 0, 0);
-    transition: transform .5s ease-in-out, right .5s ease-in-out,;
+    transform: translate3d(300px, 0, 0);
+    transition: transform .2s ease-in-out;
     will-change: transform;
 
     svg {
       display: inline-block;
-      transition: width .5s linear, height .5s linear;
     }
 
     .icon-svg-logo-part-1 {
@@ -31,18 +55,8 @@ header {
     }
 
     &.start-page-logo {
-      right: 50%;
-      transform: translate3d(50%, 57%, 0);
 
-
-      .icon-svg-logo-part-1 {
-        width: 65px;
-        height: 71px;
-      }
-      .icon-svg-logo-part-2 {
-        width: 104px;
-        height: 32px;
-      }
+      transform: translate3d(0, 0, 0);
     }
   }
 }

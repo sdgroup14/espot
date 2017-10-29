@@ -1,7 +1,68 @@
 .index-s1 {
-  padding: 119px 0 35px;
+  padding: 51px 0 35px;
   text-align: center;
   position: static;
+  overflow: hidden;
+  
+  .container {
+    max-width: 320px;
+    overflow: hidden;
+  }
+
+  .start-page-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+
+    .icon-svg-logo-part-1 {
+      width: 65px;
+        height: 71px;
+      fill: #ffc300;
+    }
+    .icon-svg-logo-part-2 {
+       width: 104px;
+        height: 32px;
+         margin: 10px 0 0 5px;
+      fill: #CACCD1;
+    }
+  }
+
+
+  .steps-wrapper {
+    display: flex;
+    width: 200%;
+    // margin: 0 auto;
+    // white-space: nowrap;
+    // vertical-align: top;
+    // overflow: visible;
+
+    .first-step-auth, .second-step-auth {
+      width: 308px;
+      // display: inline-block;
+      transition: transform .2s ease-in-out;
+      transform: translate3d(0, 0 , 0);
+
+
+      &.active {
+        transform: translate3d(-100%, 0 , 0);
+      }
+
+    }
+    .first-step-auth {
+      // float: left;
+      // transform: translate3d(-100%, 0 , 0)
+    }
+
+.second-step-auth {
+      // display: flex;
+      // flex-direction: column;
+      // white-space: wrap;
+      // flex-wrap: wrap;
+    }
+
+
+  }
 
   .login-header {
     @extend %sb;
@@ -10,7 +71,20 @@
     text-transform: uppercase;
     color: #CACCD1;
     margin-bottom: 20px;
+    // opacity: 0;
+    // visibility: hidden;
+    // transition: all .15s ease-in-out;
+
+    // &.header-show {
+      // opacity: 1;
+    // visibility: visible;
+    // }
   }
+
+
+  // .login-header-2-step {
+
+  // }
   .authorization-social {
     display: flex;
     flex-direction: row;
@@ -20,7 +94,7 @@
     margin: 0 auto 47px;
   }
 
-  .btn-place-serch {
+  .btn-place-search {
     width: 178px;
     height: 37px;
     background: #FFFFFF;
@@ -76,7 +150,7 @@
     fill: #ffffff;
   }
 
-  .icon-svg-serch {
+  .icon-svg-search {
     width: 16.8px;
     height: 16.8px;
     fill: #D6D9DE;
@@ -107,5 +181,58 @@
     height: 15px;
     fill: #D6D9DE;
     margin-right: 5px;
+  }
+    .index-menu {
+      max-width: 183px;
+      margin: 0 auto;
+    }
+  .index-menu-item {
+    margin-bottom: 25px;
+
+    .menu-icon-svg-box {
+      display: flex;
+      width: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+    
+
+    a{
+      display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    }
+    
+
+    span {
+  @extend %sl;
+  font-size : 15px;
+  letter-spacing : 0.38px;
+  color : #757A80;
+  margin-left: 10px;
+    }
+
+    svg {
+      fill: #D6D9DE;
+    }
+  }
+
+  .menu-icon-svg-search {
+    width: 28px;
+    height: 28px;
+  }
+  .menu-icon-svg-kitchen {
+    width: 37px;
+    height: 35px;
+  }
+  .menu-icon-svg-map-marker {
+width: 28px;
+    height: 38px;
+  }
+  .menu-icon-svg-heart {
+width: 36px;
+    height: 32px;
   }
 }
