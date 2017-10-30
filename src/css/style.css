@@ -326,8 +326,12 @@ body {
   border-radius: 3px; }
 
 .pac-item {
-  line-height: 37px;
-  border: none; }
+  line-height: 42px;
+  border: none;
+  font-size: 15px; }
+
+.pac-item-query {
+  font-size: 15px; }
 
 .pac-icon {
   margin-top: 9px; }
@@ -369,7 +373,6 @@ header {
     letter-spacing: 0.13px;
     text-transform: uppercase;
     color: #54D6F0;
-    transition: all .5s ease-in-out;
     opacity: 0;
     visibility: hidden; }
     header .page-title.active {

@@ -107,8 +107,13 @@ body {
 }
 
 .pac-item {
-  line-height: 37px;
+  line-height: 42px;
   border: none;
+  font-size: 15px;
+}
+
+.pac-item-query {
+  font-size: 15px;
 }
 
 .pac-icon {

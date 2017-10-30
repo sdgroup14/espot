@@ -42,7 +42,7 @@
     $urlRouterProvider.otherwise('/');
     $stateProvider
       .state('kitchen', {
-        url: '/kitchen/kitchen',
+        url: '/kitchen',
         templateUrl: '../views/pages/kitchen/s1.html',
         controller: KitchenCtrl
       })

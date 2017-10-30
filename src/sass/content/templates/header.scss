@@ -4,29 +4,26 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  overflow:hidden;
+  overflow: hidden;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-        height: 48px;
+    height: 48px;
     padding: 0 15px;
   }
-
   .page-title {
     color: #54D6F0;
     @extend %sm;
-    font-size : 13px;
-    letter-spacing : 0.13px;
-    text-transform : uppercase;
-    color : #54D6F0;
-    transition: all .5s ease-in-out;
+    font-size: 13px;
+    letter-spacing: 0.13px;
+    text-transform: uppercase;
+    color: #54D6F0; // transition: all .15s ease-in-out;
     opacity: 0;
     visibility: hidden;
-
     &.active {
       opacity: 1;
-    visibility: visible;
+      visibility: visible;
     }
   }
 
