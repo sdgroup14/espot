@@ -30,6 +30,7 @@
 ================================================================================
 */
 
+
 .clearfix:after {
   content: "";
   display: block;
@@ -153,8 +154,8 @@ body {
 @import "content/templates/header";
 @import "content/templates/menu";
 
-@import "content/pages/index/s1";
+@import "content/pages/index";
 
-@import "content/pages/search/s1";
+@import "content/pages/search";
 
-@import "content/pages/kitchen/s1";
+@import "content/pages/kitchen";

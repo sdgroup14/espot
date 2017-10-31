@@ -1,13 +1,15 @@
 <section class="kitchen-s1">
   <div class="container">
     <div class="kitchen-page-result">
-    	<div class="kitchen-category">
-  			<span class="kitchen-category-val">А</span>
-  			<div class="kitchen-category-item">
-  				<div class="kitchen-category-item-name">Авторская</div>
-  				<div class="kitchen-category-item-count">15</div>
+
+    	<div class="kitchen-category" ng-repeat="item in dataKitchen">
+  			<span class="kitchen-category-val">{{item.firstLetter}}</span>
+  			<div class="kitchen-category-item" ng-repeat="i in item.items">
+  				<div class="kitchen-category-item-name">{{i.kitchenTitle}}</div>
+  				<div class="kitchen-category-item-count">{{i.kitchenCount}}</div>
   			</div>
     	</div>
+
     </div>
     <button class="kitchen-page-btn">
       <svg class="icon-svg-settings">

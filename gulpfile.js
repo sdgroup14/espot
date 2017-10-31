@@ -23,7 +23,8 @@ var gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     svgmin = require('gulp-svgmin'),
     cheerio = require('gulp-cheerio'),
-    replace = require('gulp-replace');
+    replace = require('gulp-replace'),
+    notifier = require('node-notifier');
 
 gulp.task('sass', function(){
   gulp.src('src/sass/style.scss')

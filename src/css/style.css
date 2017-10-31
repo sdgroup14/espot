@@ -1,10 +1,10 @@
 .index-s1 .login-header {
   font-family: "SFPDisplayBold"; }
 
-.index-s1 .btn-place-s-txt, .index-s1 .btn-place-s-txt-1, .index-s1 .index-menu-item span, .search-s1 .search-page-inp, .search-s1 .search-page-result-i-dist, .search-s1 .search-result-i-dist__val, .search-s1 .search-page-btn, .kitchen-s1 .kitchen-page-btn span {
+.index-s1 .btn-place-s-txt, .index-s1 .btn-place-s-txt-1, .index-s1 .index-menu-item span, .search-s1 .search-page-inp, .search-s1 .search-page-result-i-dist, .search-s1 .search-result-i-dist__val, .search-s1 .search-page-btn, .kitchen-s1 .kitchen-category-val, .kitchen-s1 .kitchen-category-item-count, .kitchen-s1 .kitchen-page-btn span {
   font-family: "SFPDisplayLight"; }
 
-header .page-title, .index-s1 .back-link, .search-s1 .search-result-i-name {
+header .page-title, .index-s1 .back-link, .search-s1 .search-result-i-name, .kitchen-s1 .kitchen-category-item-name {
   font-family: "SFPDisplayMedium"; }
 
 /*
@@ -654,7 +654,23 @@ nav {
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
   padding: 0 10px;
   margin: 0;
-  overflow: auto; }
+  overflow: auto;
+  /* !important is needed sometimes */
+  /* Track */
+  /* Handle */ }
+  .search-s1 .search-page-result::-webkit-scrollbar {
+    width: 2px !important; }
+  .search-s1 .search-page-result::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important; }
+  .search-s1 .search-page-result::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important;
+    background: #41617D !important;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important; }
+  .search-s1 .search-page-result::-webkit-scrollbar-thumb:window-inactive {
+    background: #41617D !important; }
 
 .search-s1 .search-page-result-item {
   position: relative;
@@ -673,10 +689,18 @@ nav {
     background-color: #EAECED; }
 
 .search-s1 .search-result-i-logo {
-  max-height: 30px; }
+  max-height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .search-s1 .search-result-i-logo img {
+    max-width: 28px; }
 
 .search-s1 .search-result-i-info {
-  position: relative; }
+  position: relative;
+  width: 111px;
+  overflow: hidden; }
 
 .search-s1 .search-result-i-rating {
   display: flex;
@@ -691,12 +715,13 @@ nav {
 
 .search-s1 .search-result-i-name {
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.1;
   letter-spacing: 0.14px;
   color: #757A80; }
 
 .search-s1 .search-page-result-i-dist {
-  height: 28px;
+  height: 30px;
+  width: 50px;
   font-size: 13px;
   line-height: 1;
   letter-spacing: 0.13px;
@@ -705,13 +730,15 @@ nav {
   align-items: flex-end; }
 
 .search-s1 .search-result-i-dist__val {
-  height: 28px;
+  width: 40px;
+  height: 30px;
   font-size: 13px;
   line-height: 1;
   letter-spacing: 0.13px;
   color: #606060;
   display: flex;
-  align-items: flex-end; }
+  align-items: flex-end;
+  justify-content: flex-end; }
 
 .search-s1 .search-page-btn {
   width: 100%;
@@ -731,23 +758,56 @@ nav {
 .kitchen-s1 .kitchen-page-result {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
-  padding: 24px 10px 24px 10px;
+  padding: 24px 10px 24px 18px;
   margin: 0;
-  overflow: auto; }
+  overflow: auto;
+  /* Track */
+  /* Handle */ }
+  .kitchen-s1 .kitchen-page-result::-webkit-scrollbar {
+    width: 2px !important; }
+  .kitchen-s1 .kitchen-page-result::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important; }
+  .kitchen-s1 .kitchen-page-result::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important;
+    background: #41617D !important;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important; }
+  .kitchen-s1 .kitchen-page-result::-webkit-scrollbar-thumb:window-inactive {
+    background: #41617D !important; }
 
 .kitchen-s1 .kitchen-category {
   position: relative;
-  padding-left: 20px; }
+  padding-left: 30px;
+  margin-bottom: 7px; }
 
 .kitchen-s1 .kitchen-category-val {
   position: absolute;
   left: 0;
-  top: 0; }
+  top: 0;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  color: #757A80;
+  text-transform: uppercase; }
 
 .kitchen-s1 .kitchen-category-item {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+
+.kitchen-s1 .kitchen-category-item-name {
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  color: #757A80; }
+
+.kitchen-s1 .kitchen-category-item-count {
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  color: #757A80; }
 
 .kitchen-s1 .kitchen-page-btn {
   width: 100%;

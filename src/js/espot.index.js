@@ -47,7 +47,7 @@
     $stateProvider
       .state('index', {
         url: '/',
-        templateUrl: '../views/pages/index/s1.html',
+        templateUrl: '../views/pages/index.html',
         controller: IndexCtrl,
       })
   };
