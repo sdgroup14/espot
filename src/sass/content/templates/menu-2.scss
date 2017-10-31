@@ -1,0 +1,105 @@
+.nav-2 {
+  height: 51px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate3d(0, 100%, 0);
+  will-change: transform;
+  transition: transform .3s ease-in-out;
+
+  &.nav-show {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  svg {
+    fill: #D6D9DE;
+    transition: fill .1s ease-in-out;
+  }
+
+  .menu-icon-svg-menu {
+    width: 28px;
+    height: 19px;
+  }
+
+  .nav-item {
+    &:first-of-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+    span {
+@extend %sm;
+  font-size : 15px;
+  line-height : 17px;
+  letter-spacing : 0.15px;
+  color : #D6D9DE;
+
+    }
+
+
+    &.active {
+      svg{
+
+      fill: #54D6F0;
+      }
+    }
+    
+  }
+  
+
+  // .menu-icon-svg-search {
+  //   width: 25px;
+  //   height: 25px;
+  // }
+
+  .icon-svg-arr-back {
+    width: 7.5px;
+    height: 15px;
+  }
+
+  .menu-icon-svg-info {
+    width: 25px;
+    height: 25px;
+  }
+
+  .menu-icon-svg-appliances {
+    width: 20px;
+    height: 23px;
+  }
+
+  // .menu-icon-svg-kitchen {
+  //   width: 27px;
+  //   height: 26px;
+  // }
+
+  .menu-icon-svg-map-marker-2 {
+    width: 19px;
+    height: 26px;
+
+  }
+
+  .menu-icon-svg-rating {
+width: 26px;
+height: 25px;
+  }
+  // .menu-icon-svg-heart {
+  //   width: 27px;
+  //   height: 24px;
+  // }
+
+
+}

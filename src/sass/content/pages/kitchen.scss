@@ -11,6 +11,7 @@
     padding: 24px 10px 24px 18px;
     margin: 0;
     overflow: auto;
+    border-radius: 3px;
 
      &::-webkit-scrollbar {
     width: 2px !important;
@@ -34,6 +35,30 @@
  &::-webkit-scrollbar-thumb:window-inactive {
    background: #41617D !important; 
  }
+
+
+&:after
+{
+  position: absolute;
+  bottom: 38px;
+  left: 0;
+  right: 0;
+  display: block;
+  content: '';
+  height: 70px;
+  background : -moz-linear-gradient(50% 92.62% 90deg,rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 0) 100%);
+  background : -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background : -webkit-gradient(linear,50% 92.62% ,50% 3.93% ,color-stop(0,rgba(255, 255, 255, 1) ),color-stop(1,rgba(255, 255, 255, 0) ));
+  background : -o-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background : -ms-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF' ,GradientType=0)";
+  background : linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#FFFFFF' , GradientType=0);
+}
+
+
+
+
   }
 
   .kitchen-category {

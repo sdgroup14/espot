@@ -7,7 +7,9 @@
       'ngAnimate',
       'espot.index',
       'espot.search',
-      'espot.kitchen'
+      'espot.kitchen',
+      'espot.institution',
+      'espot.institution-menu'
     ])
     .controller('AppCtrl', AppCtrl)
     .config(Config);
