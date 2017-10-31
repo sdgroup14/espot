@@ -269,7 +269,8 @@ button {
   visibility: hidden; }
 
 body {
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-tap-highlight-color: transparent; }
 
 section {
   width: 100%;
