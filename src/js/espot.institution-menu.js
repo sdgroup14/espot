@@ -36,6 +36,15 @@
       }, 500);
     });
 
+  //     $scope.isActive = false;
+  // $scope.activeButton = function() {
+  //   $scope.isActive = !$scope.isActive;
+  // }  
+
+  $('.inst-menu-item').on('click', function(){
+    $(this).toggleClass('active');
+  })
+
 
 
     // $scope.dataKitchen = [];
