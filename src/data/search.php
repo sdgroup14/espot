@@ -12,14 +12,14 @@
 
 	$data2['placeTitle'] = '3BCafe';
 	$data2['placeRate'] = 3;
-	$data1['placeId'] = 2;
+	$data2['placeId'] = 2;
 	$data2['placeDistance'] = 2;
 	$data2['placePrice'] = 95;
 	$data2['placeLogo'] = 'data/search/id_2.png';
 
 	$data3['placeTitle'] = 'Despacito';
 	$data3['placeRate'] = 4;
-	$data1['placeId'] = 3;
+	$data3['placeId'] = 3;
 	$data3['placeDistance'] = 5;
 	$data3['placePrice'] = 145;
 	$data3['placeLogo'] = 'data/search/id_3.png';

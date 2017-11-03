@@ -92,7 +92,11 @@
   }
 
   .institution-cover {
-    height: 173px;
+    height: auto;
+
+    img {
+      width: 100%;
+    }
   }
 
   .dis-ard {

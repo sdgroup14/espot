@@ -9,7 +9,8 @@
       'espot.search',
       'espot.kitchen',
       'espot.institution',
-      'espot.institution-menu'
+      'espot.institution-menu',
+      'espot.institution-reviews'
     ])
     .controller('AppCtrl', AppCtrl)
     .config(Config);

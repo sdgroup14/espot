@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="search-page-result">
-      <div class="search-page-result-item" ng-repeat="item in dataSearch">
+      <div class="search-page-result-item" ng-repeat="item in dataSearch"  data-place-id="{{item.placeId}}">
         <div class="search-result-i-logo"><img src="{{item.placeLogo}}" alt=""></div>
         <div class="search-result-i-info">
           <div class="search-result-i-rating">
