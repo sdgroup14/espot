@@ -5,18 +5,21 @@
 	
 	$data1['placeTitle'] = 'Burger King';
 	$data1['placeRate'] = 5;
+	$data1['placeId'] = 1;
 	$data1['placeDistance'] = 0.5;
 	$data1['placePrice'] = 120;
 	$data1['placeLogo'] = 'data/search/id_1.png';
 
 	$data2['placeTitle'] = '3BCafe';
 	$data2['placeRate'] = 3;
+	$data1['placeId'] = 2;
 	$data2['placeDistance'] = 2;
 	$data2['placePrice'] = 95;
 	$data2['placeLogo'] = 'data/search/id_2.png';
 
 	$data3['placeTitle'] = 'Despacito';
 	$data3['placeRate'] = 4;
+	$data1['placeId'] = 3;
 	$data3['placeDistance'] = 5;
 	$data3['placePrice'] = 145;
 	$data3['placeLogo'] = 'data/search/id_3.png';

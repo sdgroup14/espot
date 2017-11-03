@@ -41,41 +41,41 @@
 
     $scope.dataKitchen = [];
 
-    $http({
-      method: 'get',
-      url: 'https://api.icreations.agency/kitchen'
-    }).then(function(response) {
-      $scope.dataKitchen = response.data;
-      console.log(response);
-    }, function(error) {
-      console.log('Ошибка:' + error);
-    });
+    // $http({
+    //   method: 'get',
+    //   url: 'https://api.icreations.agency/kitchen'
+    // }).then(function(response) {
+    //   $scope.dataKitchen = response.data;
+    //   console.log(response);
+    // }, function(error) {
+    //   console.log('Ошибка:' + error);
+    // });
 
-    $scope.getTimes = function(n) {
-      return new Array(n);
-    };
+    // $scope.getTimes = function(n) {
+    //   return new Array(n);
+    // };
 
-           $http({
-      method: 'get',
-      url: 'https://api.icreations.agency/cafe'
-    }).then(function(response) {
-      // $scope.dataSearch = response.data;
-      console.log('Cafe:' + response);
+    //        $http({
+    //   method: 'get',
+    //   url: 'https://api.icreations.agency/cafe'
+    // }).then(function(response) {
+    //   // $scope.dataSearch = response.data;
+    //   console.log('Cafe:' + response);
 
-    }, function(error) {
-      console.log(error);
-    });
+    // }, function(error) {
+    //   console.log(error);
+    // });
 
-        $http({
-      method: 'get',
-      url: 'https://api.icreations.agency/comments'
-    }).then(function(response) {
-      // $scope.dataSearch = response.data;
-      console.log('comments:' + response);
+    //     $http({
+    //   method: 'get',
+    //   url: 'https://api.icreations.agency/comments'
+    // }).then(function(response) {
+    //   // $scope.dataSearch = response.data;
+    //   console.log('comments:' + response);
 
-    }, function(error) {
-      console.log(error);
-    });
+    // }, function(error) {
+    //   console.log(error);
+    // });
 
 
   };
