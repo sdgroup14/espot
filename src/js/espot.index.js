@@ -28,12 +28,12 @@
     // });
 
     $rootScope.$on('$locationChangeSuccess', function(evt) {
-      // console.log(evt);
-      // $timeout(function(){
-      //  $('nav').removeClass('nav-show');
-      // $('.logo').removeClass('start-page-logo');
-      // $('.page-title').removeClass('active');
-      // }, 1);
+      $timeout(function() {
+       $('.page-title').removeClass('active');
+      $('.nav-1').removeClass('nav-show');
+      $('.nav-2').removeClass('nav-show');
+      $('.logo').removeClass('start-page-logo');
+      }, 100);
     });
 
     // $rootScope.$on('$locationChangeSuccess', function(evt) {});
