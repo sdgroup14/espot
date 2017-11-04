@@ -33,8 +33,8 @@
 
     $timeout(function() {
       $rootScope.pageTitle = "поиск";
-      $('.nav-1').addClass('nav-show');
       $('.nav-2').removeClass('nav-show');
+      $('.nav-1').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
       $('.page-title').addClass('active');
     }, 100);
@@ -45,8 +45,8 @@
 
     $rootScope.$on('$locationChangeSuccess', function(evt) {
       $timeout(function() {
-        $('.nav-1').addClass('nav-show');
         $('.nav-2').removeClass('nav-show');
+        $('.nav-1').addClass('nav-show');
         $('.logo').addClass('start-page-logo');
         $('.page-title').addClass('active');
       }, 100);
@@ -59,7 +59,10 @@
       url: 'https://api.icreations.agency/search'
     }).then(function(response) {
       $scope.dataSearch = response.data;
-      console.log($scope.dataSearch);
+      // console.log($scope.dataSearch);
+      $scope.starsNum = $scope.dataSearch.placeRate;
+      console.log(response.data);
+      $scope.getStarsCafeArr = Array;
     }, function(error) {
       console.log(error);
     });

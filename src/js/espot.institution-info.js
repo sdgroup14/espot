@@ -65,7 +65,7 @@
 
     $timeout(function() {
       mySwiper.update();
-    }, 50);
+    }, 1000);
 
 
   };

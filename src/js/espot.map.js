@@ -9,7 +9,7 @@
     .config(['$stateProvider', '$urlRouterProvider', config])
     .controller('MapCtrl', MapCtrl);
 
-  MapCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', 'CafeIdService'];
+  MapCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
   function MapCtrl($scope, $rootScope, $timeout, $http, CafeIdService) {
     // $('.institution-content').height($(window).height() - 110);

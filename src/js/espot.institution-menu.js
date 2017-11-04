@@ -8,9 +8,9 @@
     .config(['$stateProvider', '$urlRouterProvider', config])
     .controller('InstitutionMenuCtrl', InstitutionMenuCtrl);
 
-  InstitutionMenuCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
+  InstitutionMenuCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
-  function InstitutionMenuCtrl($scope, $rootScope, $timeout, $http) {
+  function InstitutionMenuCtrl($scope, $rootScope, $timeout, $http, $cookies) {
     $('.institution-content').height($(window).height() - 110);
 
 
@@ -41,29 +41,25 @@
   //   $scope.isActive = !$scope.isActive;
   // }  
 
-  $('.inst-menu-item').on('click', function(){
+
+
+
+
+    $http({
+      method: 'post',
+      data: '{"id":' + $cookies.get("cookiesCafeId") + '}',
+      url: 'https://api.icreations.agency/cafe'
+    }).then(function(response) {
+      $scope.dataCafeInfo = response.data;
+      console.log($scope.dataCafeInfo);
+      $scope.getStarsCafeArr = Array;
+      $scope.starsNum = +response.data.placeRate;
+    }, function(error) {
+      console.log(error);
+    });
+  $('body').on('click', '.inst-menu-item', function(){
     $(this).toggleClass('active');
   })
-
-
-
-    // $scope.dataKitchen = [];
-
-//     $http({
-//       method: 'get',
-//       url: '../data/kitchen.php'
-//     }).then(function(response) {
-//       $scope.dataKitchen = response.data;
-// // console.log($scope.dataKitchen[0]);
-// // console.log($scope.dataKitchen[$index].items);
-//     }, function(error) {
-//       console.log(error);
-//     });
-
-    // $scope.getTimes = function(n) {
-    //   return new Array(n);
-    // };
-
 
   };
 

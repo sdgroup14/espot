@@ -594,7 +594,8 @@ header {
     font-size: 15px;
     line-height: 17px;
     letter-spacing: 0.15px;
-    color: #D6D9DE; }
+    color: #D6D9DE;
+    display: none; }
     .index-s1 .back-link span {
       display: inline-block;
       vertical-align: middle; }
@@ -778,7 +779,7 @@ header {
 
 .search-s1 .search-page-result-i-dist {
   height: 30px;
-  width: 50px;
+  width: 60px;
   font-size: 13px;
   line-height: 1;
   letter-spacing: 0.13px;

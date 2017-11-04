@@ -9,11 +9,11 @@
     .config(['$stateProvider', '$urlRouterProvider', config])
     .controller('KitchenCtrl', KitchenCtrl);
 
-  KitchenCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', 'CafeIdService'];
+  KitchenCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
-  function KitchenCtrl($scope, $rootScope, $timeout, $http, CafeIdService) {
+  function KitchenCtrl($scope, $rootScope, $timeout, $http) {
     $('.kitchen-page-result').height($(window).height() - 190);
-console.log(CafeIdService.getId());
+// console.log(CafeIdService.getId());
 // console.log($scope.data);
     // console.log(data.firstName);
     $timeout(function() {

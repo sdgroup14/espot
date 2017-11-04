@@ -25,8 +25,8 @@
         <div class="search-result-i-logo"><img src="{{item.placeLogo}}" alt=""></div>
         <div class="search-result-i-info">
           <div class="search-result-i-rating">
-            <div class="star" >
-              <svg class="icon-svg-star" ng-repeat="t in getTimes(item.placeRate) track by $index">
+            <div class="star" ng-repeat="it in getStarsCafeArr(+item.placeRate) track by $index">
+              <svg class="icon-svg-star">
                 <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
             </div>
