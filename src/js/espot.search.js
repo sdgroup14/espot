@@ -4,6 +4,7 @@
   angular
     .module('espot.search', [
       'ui.router',
+      'ngCookies',
       'ngAnimate'
     ])
     .config(['$stateProvider', '$urlRouterProvider', config])
@@ -20,16 +21,15 @@
   //     }
   // });
 
-  SearchCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', 'CafeIdService'];
+  SearchCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
-  function SearchCtrl($scope, $rootScope, $timeout, $http, CafeIdService) {
+  function SearchCtrl($scope, $rootScope, $timeout, $http, $cookies) {
     $('.search-page-result').height($(window).height() - 190);
 
-
     $scope.takePlaceId = function(item) {
-      CafeIdService.setId(item.currentTarget.getAttribute("data-place-id"))
+      $cookies.put("cookiesCafeId", item.currentTarget.getAttribute("data-place-id"));
+      // console.log($cookies.get("cookiesCafeId"));
     };
-
 
     $timeout(function() {
       $rootScope.pageTitle = "поиск";
@@ -39,10 +39,8 @@
       $('.page-title').addClass('active');
     }, 100);
 
-
     $rootScope.$on('$locationChangeStart', function(evt) {
       $('.page-title').removeClass('active');
-
     });
 
     $rootScope.$on('$locationChangeSuccess', function(evt) {
@@ -56,31 +54,15 @@
 
     $scope.dataSearch = [];
 
-    // $http({
-    //   method: 'get',
-    //   url: '../data/search.php'
-    // }).then(function(response) {
-    //   $scope.dataSearch = response.data;
-
-    // }, function(error) {
-    //   console.log(error);
-    // });
-
-
     $http({
-         method: 'get',
-         url: 'https://api.icreations.agency/search'
-       }).then(function(response) {
-         $scope.dataSearch = response.data;
-       }, function(error) {
-         console.log(error);
-       });
-
-
-
-
-
-
+      method: 'get',
+      url: 'https://api.icreations.agency/search'
+    }).then(function(response) {
+      $scope.dataSearch = response.data;
+      console.log($scope.dataSearch);
+    }, function(error) {
+      console.log(error);
+    });
 
     $scope.getTimes = function(n) {
       return new Array(n);

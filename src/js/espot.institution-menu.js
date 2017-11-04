@@ -70,9 +70,9 @@
   function config($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
-      .state('institution-menu', {
+      .state('menu', {
         url: '/menu',
-        parent: 'institution',
+        parent: 'cafe',
         templateUrl: '../views/pages/institution-menu.html',
         controller: InstitutionMenuCtrl
       })

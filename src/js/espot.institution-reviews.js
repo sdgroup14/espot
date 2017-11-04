@@ -70,8 +70,9 @@
   function config($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
-      .state('institution-reviews', {
-        url: '/institution-reviews',
+      .state('reviews', {
+        url: '/reviews',
+        parent: 'cafe',
         templateUrl: '../views/pages/institution-reviews.html',
         controller: InstitutionReviewsCtrl
       })

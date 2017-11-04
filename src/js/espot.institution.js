@@ -8,9 +8,9 @@
     .config(['$stateProvider', '$urlRouterProvider', config])
     .controller('InstitutionCtrl', InstitutionCtrl);
 
-  InstitutionCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', 'CafeIdService'];
+  InstitutionCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
-  function InstitutionCtrl($scope, $rootScope, $timeout, $http, CafeIdService) {
+  function InstitutionCtrl($scope, $rootScope, $timeout, $http) {
     // $('.institution-content').height($(window).height() - 110);
     // console.log(CafeIdService.getId());
 
@@ -57,13 +57,13 @@
   };
 
   function config($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
     $stateProvider
-      .state('institution', {
-        url: '/search/:cafe',
+      .state('cafe', {
+        url: '/cafe',
         template: '<div ui-view class="view-content"></div>',
         controller: InstitutionCtrl,
-        redirectTo: 'institution-info'
-      })
+        redirectTo: 'info'
+      });
+    $urlRouterProvider.otherwise('/');
   };
 })();

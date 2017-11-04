@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, maximum-scale=1.0">
   <meta http-equiv="cleartype" content="on">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-cookies.js"></script>
   <!-- <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script> -->
   <script src="https://code.angularjs.org/1.6.5/angular-animate.min.js"></script>
   <script src="js/app.js"></script>
@@ -16,7 +18,9 @@
   <script src="js/espot.search.js"></script>
   <script src="js/espot.kitchen.js"></script>
   <script src="js/espot.institution.js"></script>
+  <script src="js/espot.map.js"></script>
   <script src="js/espot.institution-info.js"></script>
+  <script src="js/espot.institution-map.js"></script>
   <script src="js/espot.institution-menu.js"></script>
   <script src="js/espot.institution-reviews.js"></script>
   <!--        <script src="js/about.js"></script>
@@ -26,6 +30,7 @@
     <script src="js/partners.js"></script>
     <script src="js/works.js"></script>
     <script src="js/mobile_menu.js"></script> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <title></title>
   <!-- <title>{{title}}</title> -->
@@ -39,7 +44,8 @@
   <div ui-view class="view-content"></div>
   <ng-include src="'views/templates/menu.html'"></ng-include>
   <ng-include src="'views/templates/menu-2.html'"></ng-include>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnYGKIPOYed3bRlJ_k9Z-hXa8TFr_r7Bg&libraries=places&language=en&callback=initAutocomplete" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA61HQMHezW5FruWR2Nor-cZPloR05K6-g&libraries=places&language=en&callback=initAutocomplete" async="" defer=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
   <script src="js/events.js"></script>
   <script>
   function initAutocomplete() {

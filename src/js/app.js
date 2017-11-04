@@ -5,27 +5,31 @@
     .module('espot', [
       'ui.router',
       'ngAnimate',
+      // 'ngCookies',
       'espot.index',
       'espot.search',
       'espot.kitchen',
       'espot.institution',
+      'espot.map',
       'espot.institution-info',
       'espot.institution-menu',
+      'espot.institution-map',
       'espot.institution-reviews'
     ])
     .controller('AppCtrl', AppCtrl)
-    .config(Config)
-    .service('CafeIdService', function () {
-    var _cafe_id = null;
-    return {
-        setId: function (id) {
-            _cafe_id = id;
-        },
-        getId: function () {
-            return _cafe_id;
-        }
-    }
-});
+    .config(Config);
+//     .service('CafeIdService', function () {
+//     var _cafe_id = null;
+//     // var _cafe_id = 5;
+//     return {
+//         setId: function (id) {
+//             _cafe_id = id;
+//         },
+//         getId: function () {
+//             return _cafe_id;
+//         }
+//     }
+// });
 
   AppCtrl.$inject = ['$scope', '$rootScope', '$timeout'];
 
@@ -66,10 +70,10 @@ $urlRouterProvider.otherwise('/');
       });
 
     
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-    });
+    // $locationProvider.html5Mode({
+    //   enabled: true,
+    //   requireBase: false
+    // });
   };
 
 })();

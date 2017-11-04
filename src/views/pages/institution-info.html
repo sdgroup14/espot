@@ -6,21 +6,20 @@
         <div class="inst-head-info">
           <div class="inst-head-rating">
             <div class="star" ng-repeat="i in getStarsCafeArr(starsNum) track by $index">
-              <svg class="icon-svg-star" >
+              <svg class="icon-svg-star">
                 <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
             </div>
           </div>
           <div class="inst-head-name">{{dataCafeInfo.placeTitle}}</div>
         </div>
-        <div class="back-to-search">
-          <svg class="icon-svg-close">
-            <use xlink:href="img/sprite.svg#close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </div>
       </div>
       <div class="institution-cover">
-        <img src="img/cafe-cover.png" alt="">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" ng-repeat="i in dataCafeInfo.placeGallery"><img src="{{i}}" alt=""></div>
+          </div>
+        </div>
       </div>
       <div class="dis-ard">
         <div class="inst-adr">
@@ -53,12 +52,15 @@
       </div>
       <div class="work-time">
         <svg class="icon-svg-clock">
-              <use xlink:href="img/sprite.svg#clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
+          <use xlink:href="img/sprite.svg#clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
         <div class="work-time-item weekdays"><span>{{dataCafeInfo.placeHours[0].days}}:</span> {{dataCafeInfo.placeHours[0].hours}}</div>
         <div class="work-time-item weekend"><span>{{dataCafeInfo.placeHours[1].days}}:</span> {{dataCafeInfo.placeHours[0].hours}}</div>
       </div>
       <div class="inst-services">
+        <!-- <svg ng-class="icon-svg-{{i}}" ng-repeat="i in dataCafeInfo.placeService">
+          <use xlink:href="img/sprite.svg#{{i}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg> -->
         <svg class="icon-svg-purse">
           <use xlink:href="img/sprite.svg#purse" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
         </svg>
@@ -71,7 +73,7 @@
         <svg class="icon-svg-delivery">
           <use xlink:href="img/sprite.svg#delivery" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
         </svg>
-      </div> 
+      </div>
       <h2 class="inst-header">
         <svg class="icon-svg-kitchen-2">
           <use xlink:href="img/sprite.svg#kitchen-2" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -87,7 +89,7 @@
         </svg>
         <span>КУХНЯ</span>
       </h2>
-      <p class="inst-info">Первый в Украине ресторан Современные китайской кухни, где сконцентрирована мощная энергия крупнейших мировых мегаполисов.</p>
+      <p class="inst-info">{{dataCafeInfo.placeAbout}}</p>
     </div>
   </div>
 </section>

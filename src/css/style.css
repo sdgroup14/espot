@@ -1059,7 +1059,7 @@ header {
   position: relative;
   justify-content: flex-start;
   align-items: center;
-  max-width: 280px;
+  width: 93%;
   height: 58px;
   margin: 0 auto 20px; }
   .institution-info .inst-services:before, .institution-info .inst-services:after {
@@ -1079,7 +1079,7 @@ header {
     fill: #D6D9DE;
     margin-right: 22px; }
 
-.institution-info .icon-svg-purse {
+.institution-info .icon-svg-cash {
   width: 23px;
   height: 23px; }
 
@@ -1087,11 +1087,11 @@ header {
   width: 33px;
   height: 21px; }
 
-.institution-info .icon-svg-parking {
+.institution-info .icon-svg-drive {
   width: 34px;
   height: 21px; }
 
-.institution-info .icon-svg-delivery {
+.institution-info .icon-svg-deliver {
   width: 28px;
   height: 23px; }
 
@@ -1149,6 +1149,11 @@ header {
   color: #606060;
   padding-left: 37px;
   margin-bottom: 18px; }
+
+.institution-info .swiper-container {
+  width: 100%;
+  height: auto;
+  min-height: 175px; }
 
 .institution-menu .container {
   position: relative;
@@ -1461,5 +1466,17 @@ header {
   line-height: 19px;
   letter-spacing: 0.13px;
   color: #606060; }
+
+.institution-map #dir-map {
+  display: block;
+  width: 100%;
+  height: 400px;
+  margin: 20px auto; }
+
+.map #mapAll {
+  display: block;
+  width: 100%;
+  height: 400px;
+  margin: 20px auto; }
 
 /*# sourceMappingURL=style.css.map */

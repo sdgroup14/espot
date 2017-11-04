@@ -10,7 +10,7 @@
     filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
     overflow: auto;
     border-radius: 3px;
-    
+
 
     &::-webkit-scrollbar {
       width: 2px !important;
@@ -214,7 +214,7 @@
     position: relative;
     justify-content: flex-start;
     align-items: center;
-    max-width: 280px;
+    width: 93%;
     height: 58px;
     margin: 0 auto 20px;
 
@@ -245,7 +245,7 @@
     }
   }
 
-  .icon-svg-purse {
+  .icon-svg-cash {
     width: 23px;
     height: 23px;
   }
@@ -255,86 +255,88 @@
     height: 21px;
   }
 
-  .icon-svg-parking {
+  .icon-svg-drive {
     width: 34px;
     height: 21px;
   }
 
-  .icon-svg-delivery {
+  .icon-svg-deliver {
     width: 28px;
     height: 23px;
   }
 
 
-.inst-header {
-  
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 10px;
-  margin-bottom: 8px;
+  .inst-header {
 
-  span {
-    @extend %sb;
-  font-size: 13px;
-  letter-spacing: 0.13px;
-  text-transform: uppercase;
-  color: #CACCD1;
-  }
-}
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+    margin-bottom: 8px;
 
-.icon-svg-kitchen-2 {
-  width: 19px;
-  height: 18px;
-  fill: #D6D9DE;
-      margin-right: 8px;
-}
-
-.inst-kitchen-info {
-  padding: 0 10px;
-  margin-bottom: 20px;
-  
-}
-.inst-kitchen-info-item {
-  position: relative;
-  @extend %sl;
-  font-size : 15px;
-  line-height : 19px;
-  letter-spacing : 0.15px;
-  color : #606060;
-  padding-left: 27px;
-
-  &:before {
-    display: block;
-    content: '';
-    width: 3px;
-    height: 3px;
-    background-color: #D6D9DE;
-    border-radius: 50%;
-    position: absolute;
-    left: 7px;
-    top: 50%;
-    transform: translateY(-50%);
+    span {
+      @extend %sb;
+      font-size: 13px;
+      letter-spacing: 0.13px;
+      text-transform: uppercase;
+      color: #CACCD1;
+    }
   }
 
-}
+  .icon-svg-kitchen-2 {
+    width: 19px;
+    height: 18px;
+    fill: #D6D9DE;
+    margin-right: 8px;
+  }
 
-.icon-svg-info {
-  width: 18.5px;
-  height: 18.5px;
-  fill: #D6D9DE;
-  margin-right: 8px;
-}
+  .inst-kitchen-info {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+  .inst-kitchen-info-item {
+    position: relative;
+    @extend %sl;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.15px;
+    color: #606060;
+    padding-left: 27px;
 
-.inst-info {
-  @extend %sl;
-  font-size : 15px;
-  line-height : 19px;
-  letter-spacing : 0.15px;
-  color : #606060;
-  padding-left: 37px;
-  margin-bottom: 18px;
-}
+    &:before {
+      display: block;
+      content: '';
+      width: 3px;
+      height: 3px;
+      background-color: #D6D9DE;
+      border-radius: 50%;
+      position: absolute;
+      left: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 
+  .icon-svg-info {
+    width: 18.5px;
+    height: 18.5px;
+    fill: #D6D9DE;
+    margin-right: 8px;
+  }
 
+  .inst-info {
+    @extend %sl;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.15px;
+    color: #606060;
+    padding-left: 37px;
+    margin-bottom: 18px;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: auto;
+    min-height: 175px;
+  }
 }
