@@ -13,7 +13,18 @@
       'espot.institution-reviews'
     ])
     .controller('AppCtrl', AppCtrl)
-    .config(Config);
+    .config(Config)
+    .service('CafeIdService', function () {
+    var _cafe_id = null;
+    return {
+        setId: function (id) {
+            _cafe_id = id;
+        },
+        getId: function () {
+            return _cafe_id;
+        }
+    }
+});
 
   AppCtrl.$inject = ['$scope', '$rootScope', '$timeout'];
 

@@ -9,15 +9,16 @@
     .config(['$stateProvider', '$urlRouterProvider', config])
     .controller('IndexCtrl', IndexCtrl);
 
-  IndexCtrl.$inject = ['$scope', '$rootScope', '$timeout'];
+  IndexCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
-  function IndexCtrl($scope, $rootScope, $timeout) {
-    
+  function IndexCtrl($scope, $rootScope, $timeout, $http) {
+
     $timeout(function() {
       $('.page-title').removeClass('active');
-      $('nav').removeClass('nav-show');
+      $('.nav-1').removeClass('nav-show');
+      $('.nav-2').removeClass('nav-show');
       $('.logo').removeClass('start-page-logo');
-    }, 500);
+    }, 100);
 
 
     // $rootScope.$on('$locationChangeStart', function(evt) {
@@ -26,8 +27,8 @@
     //   $('.page-title').removeClass('active');
     // });
 
-        $rootScope.$on('$locationChangeSuccess', function(evt) {
-          console.log(evt);
+    $rootScope.$on('$locationChangeSuccess', function(evt) {
+      // console.log(evt);
       // $timeout(function(){
       //  $('nav').removeClass('nav-show');
       // $('.logo').removeClass('start-page-logo');
@@ -35,10 +36,7 @@
       // }, 1);
     });
 
-           $rootScope.$on('$locationChangeSuccess', function(evt) { 
-    });
-
-
+    // $rootScope.$on('$locationChangeSuccess', function(evt) {});
 
   };
 

@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="search-page-result">
-      <div class="search-page-result-item" ng-repeat="item in dataSearch"  data-place-id="{{item.placeId}}">
+      <a href="" ui-sref="institution" class="search-page-result-item" ng-repeat="item in dataSearch"  ng-click="takePlaceId($event)" data-place-id="{{item.placeId}}">
         <div class="search-result-i-logo"><img src="{{item.placeLogo}}" alt=""></div>
         <div class="search-result-i-info">
           <div class="search-result-i-rating">
@@ -35,7 +35,7 @@
         </div>
         <div class="search-page-result-i-dist">{{item.placeDistance}} км</div>
         <div class="search-result-i-dist__val">~{{item.placePrice}}</div>
-      </div>
+      </a>
     </div>
     <button class="search-page-btn">искать</button>
   </div>

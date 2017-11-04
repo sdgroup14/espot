@@ -2,17 +2,16 @@
   <div class="container">
     <div class="institution-content">
       <div class="institution-header">
-        <div class="inst-logo"><img src="img/search-logo.png" alt=""></div>
+        <div class="inst-logo"><img src="{{dataCafeInfo.placeLogo}}" alt=""></div>
         <div class="inst-head-info">
           <div class="inst-head-rating">
-            <div class="star">
-              <svg class="icon-svg-star">
-              <!-- <svg class="icon-svg-star" ng-repeat="t in getTimes(item.placeRate) track by $index"> -->
+            <div class="star" ng-repeat="i in getStarsCafeArr(starsNum) track by $index">
+              <svg class="icon-svg-star" >
                 <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
             </div>
           </div>
-          <div class="inst-head-name">BAO Modern Chinese Cuisine</div>
+          <div class="inst-head-name">{{dataCafeInfo.placeTitle}}</div>
         </div>
         <div class="back-to-search">
           <svg class="icon-svg-close">
@@ -28,17 +27,17 @@
           <svg class="icon-svg-map-marker">
             <use xlink:href="img/sprite.svg#map-marker-2" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
-          <span>ул. Мечникова, 14/1</span>
+          <span>{{dataCafeInfo.placeAddress}}</span>
         </div>
-        <div class="inst-dist">~7 км</div>
+        <div class="inst-dist">~{{dataCafeInfo.placeDistance}} км</div>
       </div>
       <div class="act-btns">
-        <div class="act-btn-call">
+        <a href="tel:{{dataCafeInfo.placePhone}}" class="act-btn-call">
           <svg class="icon-svg-call">
             <use xlink:href="img/sprite.svg#call" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
           <span>позвонить</span>
-        </div>
+        </a>
         <div class="act-btns-common">
           <div class="act-btn-like">
             <svg class="icon-svg-heart">
@@ -56,8 +55,8 @@
         <svg class="icon-svg-clock">
               <use xlink:href="img/sprite.svg#clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
-        <div class="work-time-item weekdays"><span>пн-чт:</span>  10:00 - 23:00</div>
-        <div class="work-time-item weekend"><span>вт-вс:</span>  10:00 - 24:00</div>
+        <div class="work-time-item weekdays"><span>{{dataCafeInfo.placeHours[0].days}}:</span> {{dataCafeInfo.placeHours[0].hours}}</div>
+        <div class="work-time-item weekend"><span>{{dataCafeInfo.placeHours[1].days}}:</span> {{dataCafeInfo.placeHours[0].hours}}</div>
       </div>
       <div class="inst-services">
         <svg class="icon-svg-purse">
@@ -80,9 +79,7 @@
         <span>КУХНЯ</span>
       </h2>
       <ul class="inst-kitchen-info">
-        <li class="inst-kitchen-info-item">Китайская</li>
-        <li class="inst-kitchen-info-item">Подходит для вегетарианцев</li>
-        <li class="inst-kitchen-info-item">Для веганов</li>
+        <li class="inst-kitchen-info-item" ng-repeat="i in dataCafeInfo.placeKitchen">{{i}}</li>
       </ul>
       <h2 class="inst-header">
         <svg class="icon-svg-info">
@@ -91,8 +88,6 @@
         <span>КУХНЯ</span>
       </h2>
       <p class="inst-info">Первый в Украине ресторан Современные китайской кухни, где сконцентрирована мощная энергия крупнейших мировых мегаполисов.</p>
-
-      <!-- <h2></h2> -->
     </div>
   </div>
 </section>

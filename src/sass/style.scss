@@ -22,7 +22,6 @@
 
 @import "libs/_fonts";
 
-
 /*
 ================================================================================
 |                                     Start rools                              |
@@ -41,6 +40,10 @@
 body {
   margin: 0 auto;
   -webkit-tap-highlight-color: transparent;
+
+  max-width: 640px;
+  // max-height: 640px;
+  margin: 0 auto;
 }
 
 section {

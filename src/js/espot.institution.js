@@ -8,18 +8,20 @@
     .config(['$stateProvider', '$urlRouterProvider', config])
     .controller('InstitutionCtrl', InstitutionCtrl);
 
-  InstitutionCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
+  InstitutionCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', 'CafeIdService'];
 
-  function InstitutionCtrl($scope, $rootScope, $timeout, $http) {
+  function InstitutionCtrl($scope, $rootScope, $timeout, $http, CafeIdService) {
     $('.institution-content').height($(window).height() - 110);
+    console.log(CafeIdService.getId());
 
 
     $timeout(function(){
       $rootScope.pageTitle = "О ЗАВЕДЕНИИ";
+      $('.nav-1').removeClass('nav-show');
       $('.nav-2').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
       $('.page-title').addClass('active');
-      }, 500);
+      }, 100);
 
 
     $rootScope.$on('$locationChangeStart', function(evt) {
@@ -29,31 +31,27 @@
 
     $rootScope.$on('$locationChangeSuccess', function(evt) {
       $timeout(function(){
+        $('.nav-1').removeClass('nav-show');
       $('.nav-2').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
       $('.page-title').addClass('active');
 
-      }, 500);
+      }, 100);
     });
 
 
-
-    // $scope.dataKitchen = [];
-
-//     $http({
-//       method: 'get',
-//       url: '../data/kitchen.php'
-//     }).then(function(response) {
-//       $scope.dataKitchen = response.data;
-// // console.log($scope.dataKitchen[0]);
-// // console.log($scope.dataKitchen[$index].items);
-//     }, function(error) {
-//       console.log(error);
-//     });
-
-    // $scope.getTimes = function(n) {
-    //   return new Array(n);
-    // };
+$http({
+      method: 'post',
+      data: '{"id":'+CafeIdService.getId()+'}',
+      url: 'https://api.icreations.agency/cafe'
+    }).then(function(response) {
+      $scope.dataCafeInfo = response.data;
+      console.log($scope.dataCafeInfo);
+      $scope.getStarsCafeArr = Array;
+      $scope.starsNum = +response.data.placeRate;
+    }, function(error) {
+      console.log(error);
+    });
 
 
   };

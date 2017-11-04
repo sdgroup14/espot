@@ -270,7 +270,9 @@ button {
 
 body {
   margin: 0 auto;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  max-width: 640px;
+  margin: 0 auto; }
 
 section {
   width: 100%;
