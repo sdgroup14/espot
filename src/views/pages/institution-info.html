@@ -1,0 +1,93 @@
+<section class="institution-info">
+  <div class="container">
+    <div class="institution-content">
+      <div class="institution-header">
+        <div class="inst-logo"><img src="{{dataCafeInfo.placeLogo}}" alt=""></div>
+        <div class="inst-head-info">
+          <div class="inst-head-rating">
+            <div class="star" ng-repeat="i in getStarsCafeArr(starsNum) track by $index">
+              <svg class="icon-svg-star" >
+                <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="inst-head-name">{{dataCafeInfo.placeTitle}}</div>
+        </div>
+        <div class="back-to-search">
+          <svg class="icon-svg-close">
+            <use xlink:href="img/sprite.svg#close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="institution-cover">
+        <img src="img/cafe-cover.png" alt="">
+      </div>
+      <div class="dis-ard">
+        <div class="inst-adr">
+          <svg class="icon-svg-map-marker">
+            <use xlink:href="img/sprite.svg#map-marker-2" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <span>{{dataCafeInfo.placeAddress}}</span>
+        </div>
+        <div class="inst-dist">~{{dataCafeInfo.placeDistance}} км</div>
+      </div>
+      <div class="act-btns">
+        <a href="tel:{{dataCafeInfo.placePhone}}" class="act-btn-call">
+          <svg class="icon-svg-call">
+            <use xlink:href="img/sprite.svg#call" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <span>позвонить</span>
+        </a>
+        <div class="act-btns-common">
+          <div class="act-btn-like">
+            <svg class="icon-svg-heart">
+              <use xlink:href="img/sprite.svg#heart" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </div>
+          <div class="act-btn-share">
+            <svg class="icon-svg-share">
+              <use xlink:href="img/sprite.svg#share" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="work-time">
+        <svg class="icon-svg-clock">
+              <use xlink:href="img/sprite.svg#clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        <div class="work-time-item weekdays"><span>{{dataCafeInfo.placeHours[0].days}}:</span> {{dataCafeInfo.placeHours[0].hours}}</div>
+        <div class="work-time-item weekend"><span>{{dataCafeInfo.placeHours[1].days}}:</span> {{dataCafeInfo.placeHours[0].hours}}</div>
+      </div>
+      <div class="inst-services">
+        <svg class="icon-svg-purse">
+          <use xlink:href="img/sprite.svg#purse" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+        <svg class="icon-svg-card">
+          <use xlink:href="img/sprite.svg#card" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+        <svg class="icon-svg-parking">
+          <use xlink:href="img/sprite.svg#parking" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+        <svg class="icon-svg-delivery">
+          <use xlink:href="img/sprite.svg#delivery" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+      </div> 
+      <h2 class="inst-header">
+        <svg class="icon-svg-kitchen-2">
+          <use xlink:href="img/sprite.svg#kitchen-2" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+        <span>КУХНЯ</span>
+      </h2>
+      <ul class="inst-kitchen-info">
+        <li class="inst-kitchen-info-item" ng-repeat="i in dataCafeInfo.placeKitchen">{{i}}</li>
+      </ul>
+      <h2 class="inst-header">
+        <svg class="icon-svg-info">
+          <use xlink:href="img/sprite.svg#info" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+        <span>КУХНЯ</span>
+      </h2>
+      <p class="inst-info">Первый в Украине ресторан Современные китайской кухни, где сконцентрирована мощная энергия крупнейших мировых мегаполисов.</p>
+    </div>
+  </div>
+</section>

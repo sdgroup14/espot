@@ -9,6 +9,7 @@
       'espot.search',
       'espot.kitchen',
       'espot.institution',
+      'espot.institution-info',
       'espot.institution-menu',
       'espot.institution-reviews'
     ])

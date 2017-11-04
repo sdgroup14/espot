@@ -1,10 +1,10 @@
-.index-s1 .login-header, .institution .inst-dist, .institution .act-btns span, .institution .inst-header span {
+.index-s1 .login-header, .institution-info .inst-dist, .institution-info .act-btns span, .institution-info .inst-header span {
   font-family: "SFPDisplayBold"; }
 
-.index-s1 .btn-place-s-txt, .index-s1 .btn-place-s-txt-1, .index-s1 .index-menu-item span, .search-s1 .search-page-inp, .search-s1 .search-page-result-i-dist, .search-s1 .search-result-i-dist__val, .search-s1 .search-page-btn, .kitchen-s1 .kitchen-category-val, .kitchen-s1 .kitchen-category-item-count, .kitchen-s1 .kitchen-page-btn span, .institution .inst-adr span, .institution .work-time-item, .institution .inst-kitchen-info-item, .institution .inst-info, .institution-menu .inst-menu-item-right, .institution-menu .inst-menu-item-name, .institution-menu .menu-sub-list-item, .institution-reviews .inst-reviews-item-info-full {
+.index-s1 .btn-place-s-txt, .index-s1 .btn-place-s-txt-1, .index-s1 .index-menu-item span, .search-s1 .search-page-inp, .search-s1 .search-page-result-i-dist, .search-s1 .search-result-i-dist__val, .search-s1 .search-page-btn, .kitchen-s1 .kitchen-category-val, .kitchen-s1 .kitchen-category-item-count, .kitchen-s1 .kitchen-page-btn span, .institution-info .inst-adr span, .institution-info .work-time-item, .institution-info .inst-kitchen-info-item, .institution-info .inst-info, .institution-menu .inst-menu-item-right, .institution-menu .inst-menu-item-name, .institution-menu .menu-sub-list-item, .institution-reviews .inst-reviews-item-info-full {
   font-family: "SFPDisplayLight"; }
 
-header .page-title, .nav-2 .nav-item span, .index-s1 .back-link, .search-s1 .search-result-i-name, .kitchen-s1 .kitchen-category-item-name, .institution .inst-head-name, .institution .work-time-item span, .institution-menu .inst-head-name, .institution-reviews .inst-head-name, .institution-reviews .inst-reviews-item-date, .institution-reviews .inst-reviews-item-info-full span {
+header .page-title, .nav-2 .nav-item span, .index-s1 .back-link, .search-s1 .search-result-i-name, .kitchen-s1 .kitchen-category-item-name, .institution-info .inst-head-name, .institution-info .work-time-item span, .institution-menu .inst-head-name, .institution-reviews .inst-head-name, .institution-reviews .inst-reviews-item-date, .institution-reviews .inst-reviews-item-info-full span {
   font-family: "SFPDisplayMedium"; }
 
 /*
@@ -902,32 +902,32 @@ header {
     font-size: 15px;
     color: #ffffff; }
 
-.institution .container {
+.institution-info .container {
   position: relative;
   height: 100%; }
 
-.institution .institution-content {
+.institution-info .institution-content {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
   overflow: auto;
   border-radius: 3px;
   /* Track */
   /* Handle */ }
-  .institution .institution-content::-webkit-scrollbar {
+  .institution-info .institution-content::-webkit-scrollbar {
     width: 2px !important; }
-  .institution .institution-content::-webkit-scrollbar-track {
+  .institution-info .institution-content::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
     -webkit-border-radius: 10px !important;
     border-radius: 10px !important; }
-  .institution .institution-content::-webkit-scrollbar-thumb {
+  .institution-info .institution-content::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px !important;
     border-radius: 10px !important;
     background: #41617D !important;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important; }
-  .institution .institution-content::-webkit-scrollbar-thumb:window-inactive {
+  .institution-info .institution-content::-webkit-scrollbar-thumb:window-inactive {
     background: #41617D !important; }
 
-.institution .institution-header {
+.institution-info .institution-header {
   position: relative;
   height: 52px;
   display: flex;
@@ -935,112 +935,112 @@ header {
   align-items: center;
   padding: 0 10px; }
 
-.institution .inst-logo {
+.institution-info .inst-logo {
   min-width: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center; }
-  .institution .inst-logo img {
+  .institution-info .inst-logo img {
     min-width: 30px; }
 
-.institution .inst-head-rating {
+.institution-info .inst-head-rating {
   display: flex;
   align-items: center;
   justify-content: flex-start; }
-  .institution .inst-head-rating .star {
+  .institution-info .inst-head-rating .star {
     margin-right: 2px; }
-  .institution .inst-head-rating .icon-svg-star {
+  .institution-info .inst-head-rating .icon-svg-star {
     width: 9px;
     height: 9px;
     fill: #FFC300; }
 
-.institution .inst-head-name {
+.institution-info .inst-head-name {
   font-size: 14px;
   letter-spacing: 0.14px;
   color: #757A80; }
 
-.institution .back-to-search {
+.institution-info .back-to-search {
   position: absolute;
   top: 12px;
   right: 10px; }
 
-.institution .icon-svg-close {
+.institution-info .icon-svg-close {
   width: 17px;
   height: 17px;
   fill: #D6D9DE; }
 
-.institution .institution-cover {
+.institution-info .institution-cover {
   height: auto; }
-  .institution .institution-cover img {
+  .institution-info .institution-cover img {
     width: 100%; }
 
-.institution .dis-ard {
+.institution-info .dis-ard {
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center; }
 
-.institution .inst-adr {
+.institution-info .inst-adr {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .institution .inst-adr span {
+  .institution-info .inst-adr span {
     font-size: 15px;
     line-height: 19px;
     color: #757A80; }
-  .institution .inst-adr svg {
+  .institution-info .inst-adr svg {
     width: 14.6px;
     height: 19px;
     fill: #D6D9DE;
     margin-right: 8px; }
 
-.institution .inst-dist {
+.institution-info .inst-dist {
   font-size: 15px;
   line-height: 53px;
   letter-spacing: 0.15px;
   color: #757A80; }
 
-.institution .act-btns {
+.institution-info .act-btns {
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px; }
-  .institution .act-btns .act-btns-common {
+  .institution-info .act-btns .act-btns-common {
     width: 105px;
     display: flex;
     justify-content: space-around;
     align-items: center; }
-  .institution .act-btns .act-btn-call {
+  .institution-info .act-btns .act-btn-call {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .institution .act-btns .icon-svg-call {
+  .institution-info .act-btns .icon-svg-call {
     width: 25px;
     height: 25px;
     fill: #54D6F0;
     margin-right: 15px; }
-  .institution .act-btns span {
+  .institution-info .act-btns span {
     font-size: 15px;
     letter-spacing: 0.38px;
     color: #54D6F0; }
-  .institution .act-btns .icon-svg-heart {
+  .institution-info .act-btns .icon-svg-heart {
     width: 28px;
     height: 25px;
     fill: #D6D9DE; }
-  .institution .act-btns .icon-svg-share {
+  .institution-info .act-btns .icon-svg-share {
     fill: #D6D9DE;
     width: 32px;
     height: 25px; }
 
-.institution .work-time {
+.institution-info .work-time {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   padding-left: 40px;
   margin-bottom: 15px; }
-  .institution .work-time .icon-svg-clock {
+  .institution-info .work-time .icon-svg-clock {
     position: absolute;
     width: 19px;
     height: 19px;
@@ -1048,13 +1048,13 @@ header {
     top: 0;
     fill: #D6D9DE; }
 
-.institution .work-time-item {
+.institution-info .work-time-item {
   font-size: 15px;
   color: #757A80; }
-  .institution .work-time-item span {
+  .institution-info .work-time-item span {
     margin-right: 5px; }
 
-.institution .inst-services {
+.institution-info .inst-services {
   display: flex;
   position: relative;
   justify-content: flex-start;
@@ -1062,7 +1062,7 @@ header {
   max-width: 280px;
   height: 58px;
   margin: 0 auto 20px; }
-  .institution .inst-services:before, .institution .inst-services:after {
+  .institution-info .inst-services:before, .institution-info .inst-services:after {
     display: block;
     position: absolute;
     left: 0;
@@ -1070,61 +1070,61 @@ header {
     content: '';
     height: 1px;
     border-top: 1px dashed #B0B2B3; }
-  .institution .inst-services:before {
+  .institution-info .inst-services:before {
     top: 0; }
-  .institution .inst-services:after {
+  .institution-info .inst-services:after {
     bottom: 0; }
-  .institution .inst-services svg {
+  .institution-info .inst-services svg {
     display: block;
     fill: #D6D9DE;
     margin-right: 22px; }
 
-.institution .icon-svg-purse {
+.institution-info .icon-svg-purse {
   width: 23px;
   height: 23px; }
 
-.institution .icon-svg-card {
+.institution-info .icon-svg-card {
   width: 33px;
   height: 21px; }
 
-.institution .icon-svg-parking {
+.institution-info .icon-svg-parking {
   width: 34px;
   height: 21px; }
 
-.institution .icon-svg-delivery {
+.institution-info .icon-svg-delivery {
   width: 28px;
   height: 23px; }
 
-.institution .inst-header {
+.institution-info .inst-header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 10px;
   margin-bottom: 8px; }
-  .institution .inst-header span {
+  .institution-info .inst-header span {
     font-size: 13px;
     letter-spacing: 0.13px;
     text-transform: uppercase;
     color: #CACCD1; }
 
-.institution .icon-svg-kitchen-2 {
+.institution-info .icon-svg-kitchen-2 {
   width: 19px;
   height: 18px;
   fill: #D6D9DE;
   margin-right: 8px; }
 
-.institution .inst-kitchen-info {
+.institution-info .inst-kitchen-info {
   padding: 0 10px;
   margin-bottom: 20px; }
 
-.institution .inst-kitchen-info-item {
+.institution-info .inst-kitchen-info-item {
   position: relative;
   font-size: 15px;
   line-height: 19px;
   letter-spacing: 0.15px;
   color: #606060;
   padding-left: 27px; }
-  .institution .inst-kitchen-info-item:before {
+  .institution-info .inst-kitchen-info-item:before {
     display: block;
     content: '';
     width: 3px;
@@ -1136,13 +1136,13 @@ header {
     top: 50%;
     transform: translateY(-50%); }
 
-.institution .icon-svg-info {
+.institution-info .icon-svg-info {
   width: 18.5px;
   height: 18.5px;
   fill: #D6D9DE;
   margin-right: 8px; }
 
-.institution .inst-info {
+.institution-info .inst-info {
   font-size: 15px;
   line-height: 19px;
   letter-spacing: 0.15px;

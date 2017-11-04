@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="search-page-result">
-      <a href="" ui-sref="institution" class="search-page-result-item" ng-repeat="item in dataSearch"  ng-click="takePlaceId($event)" data-place-id="{{item.placeId}}">
+      <a href="" ui-sref="institution({cafe: item.placeTitle})" class="search-page-result-item" ng-repeat="item in dataSearch"  ng-click="takePlaceId($event)" data-place-id="{{item.placeId}}">
         <div class="search-result-i-logo"><img src="{{item.placeLogo}}" alt=""></div>
         <div class="search-result-i-info">
           <div class="search-result-i-rating">
