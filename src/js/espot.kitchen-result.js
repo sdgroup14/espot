@@ -25,10 +25,10 @@
 // console.log($state.current);//It should show value now
 // console.log('э123');//It should show value now
 
-  $scope.reloadState = function(){
-    // $state.reload();
-    // $('.kitchen-page-result-wrapper').show();
-   }
+  // $scope.reloadState = function(){
+  //   // $state.reload();
+  //   // $('.kitchen-page-result-wrapper').show();
+  //  }
        $timeout(function() {
       
       // $rootScope.pageTitle = "ТИП КУХНИ";
@@ -40,6 +40,10 @@
     }, 100);
 
  
+        $scope.takePlaceId = function(item) {
+      $cookies.put("cookiesCafeId", item.currentTarget.getAttribute("data-place-id"));
+    };
+
 
 //   $transitions.onStart({from:'kitchen-result'}, function(){
 //     $('.kitchen-page-result-wrapper').show();
@@ -47,9 +51,9 @@
 
    // $('.kitchen-page-btn').on('click', function(){
     
-    $transitions.onStart({}, function(){
-    // console.log('2')
-});
+//     $transitions.onStart({}, function(){
+//     // console.log('2')
+// });
    // });
 
     //    $rootScope.$on('$locationChangeSuccess', function() {
@@ -61,18 +65,13 @@
     // });
 
 
-    $rootScope.$on('$locationChangeStart', function(evt) {
-      // $('.page-title').removeClass('active');
-
-    });
-
     $rootScope.$on('$locationChangeSuccess', function(evt) {
         // $('.kitchen-page-result-wrapper').hide();
       $timeout(function() {
-        // $('.nav-1').addClass('nav-show');
-        // $('.nav-2').removeClass('nav-show');
-        // $('.logo').addClass('start-page-logo');
-        // $('.page-title').addClass('active');
+        $('.nav-1').addClass('nav-show');
+        $('.nav-2').removeClass('nav-show');
+        $('.logo').addClass('start-page-logo');
+        $('.page-title').addClass('active');
 
       }, 100);
     });
@@ -89,10 +88,6 @@
       $scope.getStarsCafeArr = Array;
       $scope.starsNum = +response.data.placeRate;
 
-
-       $timeout(function() {
-      
-    }, 100);
 
     }, function(error) {
       console.log(error);
