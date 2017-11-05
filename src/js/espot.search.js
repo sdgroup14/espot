@@ -24,7 +24,7 @@
   SearchCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
   function SearchCtrl($scope, $rootScope, $timeout, $http, $cookies) {
-    $('.search-page-result').height($(window).height() - 190);
+    // $('.search-page-result').height($(window).height() - 190);
 
     $scope.takePlaceId = function(item) {
       $cookies.put("cookiesCafeId", item.currentTarget.getAttribute("data-place-id"));

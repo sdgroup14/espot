@@ -20,23 +20,27 @@
         </div>
       </div>
     </div>
-    <div class="search-page-result">
-      <a href="" ui-sref="cafe" class="search-page-result-item" ng-repeat="item in dataSearch"  ng-click="takePlaceId($event)" data-place-id="{{item.placeId}}">
-        <div class="search-result-i-logo"><img src="{{item.placeLogo}}" alt=""></div>
-        <div class="search-result-i-info">
-          <div class="search-result-i-rating">
-            <div class="star" ng-repeat="it in getStarsCafeArr(+item.placeRate) track by $index">
-              <svg class="icon-svg-star">
-                <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="search-result-i-name">{{item.placeTitle}}</div>
-        </div>
-        <div class="search-page-result-i-dist">{{item.placeDistance}} км</div>
-        <div class="search-result-i-dist__val">~{{item.placePrice}}</div>
-      </a>
+   <div class="search-page-result-wrapper">
+      <div class="search-page-result">
+       <a href="" ui-sref="cafe" class="search-page-result-item" ng-repeat="item in dataSearch"  ng-click="takePlaceId($event)" data-place-id="{{item.placeId}}">
+         <div class="search-result-i-logo"><img src="{{item.placeLogo}}" alt=""></div>
+         <div class="search-result-i-info">
+           <div class="search-result-i-rating">
+             <div class="star" ng-repeat="it in getStarsCafeArr(+item.placeRate) track by $index">
+               <svg class="icon-svg-star">
+                 <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+               </svg>
+             </div>
+           </div>
+           <div class="search-result-i-name">{{item.placeTitle}}</div>
+         </div>
+         <div class="search-page-result-i-dist">{{item.placeDistance}} км</div>
+         <div class="search-result-i-dist__val">~{{item.placePrice}}</div>
+       </a>
+     </div>
+   </div>
+    <div class="s-r-btn-container">
+      <button class="search-page-btn">искать</button>
     </div>
-    <button class="search-page-btn">искать</button>
   </div>
 </section>
