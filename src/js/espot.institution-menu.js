@@ -57,9 +57,6 @@
     }, function(error) {
       console.log(error);
     });
-  $('body').on('click', '.inst-menu-item', function(){
-    $(this).toggleClass('active');
-  })
 
   };
 

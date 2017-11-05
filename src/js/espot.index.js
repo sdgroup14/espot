@@ -68,6 +68,27 @@
       $('.first-step-auth, .second-step-auth').removeClass('active');
     });
 
+//     $rootScope.$on('$viewContentLoading', 
+// function(event, viewConfig){ 
+//        var $preloader = $('#page-preloader'),
+//           $spinner = $preloader.find('.spinner');
+//         $spinner.delay(1).fadeIn();
+//         $preloader.delay(1).fadeIn();
+// });
+
+
+
+//     $scope.$on('$viewContentLoaded', 
+// function(event){
+//   $timeout(function() {
+//     var $preloader = $('#page-preloader'),
+//           $spinner = $preloader.find('.spinner');
+//         $spinner.delay(1).fadeOut();
+//         $preloader.delay(1).fadeOut('slow');
+//       }, 1);
+
+//   });
+
 
   };
 
@@ -78,6 +99,7 @@
         url: '/',
         templateUrl: '../views/pages/index.html',
         controller: IndexCtrl,
+
       })
   };
 })();

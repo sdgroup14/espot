@@ -356,6 +356,30 @@ body {
   .view-content.ng-leave-active {
     opacity: 0; }
 
+.view-wrap {
+  height: 100%;
+  position: relative; }
+
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 100500; }
+
+#page-preloader .spinner {
+  width: 132px;
+  height: 132px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -66px 0 0 -66px; }
+  #page-preloader .spinner svg {
+    width: 132px;
+    height: 132px; }
+
 header {
   height: 48px;
   position: absolute;
@@ -661,7 +685,8 @@ header {
     position: absolute;
     top: 0;
     left: 6px;
-    right: 6px; }
+    right: 6px;
+    z-index: 1; }
   .search-s1 .search-page-inp {
     width: 182px;
     height: 37px;
@@ -1648,9 +1673,17 @@ header {
 
 .institution-reviews .inst-reviews-item-person {
   position: absolute;
-  left: 10px;
+  left: 0;
   top: 0;
-  width: 50px; }
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .institution-reviews .inst-reviews-item-person img {
+    width: 32px; }
 
 .institution-reviews .inst-reviews-item-date {
   font-size: 13px;

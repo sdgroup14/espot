@@ -9,27 +9,14 @@
     ])
     .config(['$stateProvider', '$urlRouterProvider', config])
     .controller('SearchCtrl', SearchCtrl)
-  //     .service('CafeIdService', function () {
-  //     var _cafe_id = null;
-  //     return {
-  //         setId: function (id) {
-  //             _cafe_id = id;
-  //         },
-  //         getId: function () {
-  //             return _cafe_id;
-  //         }
-  //     }
-  // });
 
   SearchCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$state', '$cookies'];
 
   function SearchCtrl($scope, $rootScope, $timeout, $http, $state, $cookies) {
-    // $('.search-page-result').height($(window).height() - 190);
 
     $scope.takePlaceId = function(item) {
       $cookies.put("cookiesCafeId", item.currentTarget.getAttribute("data-place-id"));
-      $rootScope.btnHref = $state.current.name;
-      $('.back-btn-general').attr('href', '#!/' + $state.current.name);
+      $cookies.put("backLinkHref", '#!/' + $state.current.name);
     };
 
     $timeout(function() {
@@ -37,19 +24,15 @@
       $('.nav-2').removeClass('nav-show');
       $('.nav-1').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
-      // $('.page-title').addClass('active');
+      $('.page-title').addClass('active');
     }, 100);
-
-    $rootScope.$on('$locationChangeStart', function(evt) {
-      // $('.page-title').removeClass('active');
-    });
 
     $rootScope.$on('$locationChangeSuccess', function(evt) {
       $timeout(function() {
         $('.nav-2').removeClass('nav-show');
         $('.nav-1').addClass('nav-show');
         $('.logo').addClass('start-page-logo');
-        // $('.page-title').addClass('active');
+        $('.page-title').addClass('active');
       }, 100);
     });
 
@@ -60,7 +43,6 @@
       url: 'https://api.icreations.agency/search'
     }).then(function(response) {
       $scope.dataSearch = response.data;
-      // console.log($scope.dataSearch);
       $scope.starsNum = $scope.dataSearch.placeRate;
       console.log(response.data);
       $scope.getStarsCafeArr = Array;
@@ -72,9 +54,23 @@
       return new Array(n);
     };
 
-    // $rootScope.backMenuBtnUrl = function() { 
-    //   $rootScope.btnHref = $state.current;
-    // };
+        $scope.propertyName = 'placePrice';
+        $scope.propertyName = 'placeRate';
+        $scope.propertyName = 'placeDistance';
+    $scope.reverse = !true;
+    // $scope.friends = friends;
+
+    $scope.sortBy = function(propertyName) {
+      $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+      $scope.propertyName = propertyName;
+      // $('.sort-btn').removeClass('active');
+    };
+
+    $('.sort-btn').on('click',function(){
+      $('.sort-btn').removeClass('active');
+      $(this).addClass('active');
+    });
+
   };
 
   function config($stateProvider, $urlRouterProvider) {

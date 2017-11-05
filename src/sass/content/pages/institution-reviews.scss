@@ -128,9 +128,19 @@
 
   .inst-reviews-item-person {
     position: absolute;
-    left: 10px;
+    left: 0;
     top: 0;
-    width: 50px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow:hidden;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    img {
+      width: 32px;
+    }
   }
 
   .inst-reviews-item-date {

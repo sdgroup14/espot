@@ -12,8 +12,7 @@
   InstitutionInfoCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
   function InstitutionInfoCtrl($scope, $rootScope, $timeout, $http, $cookies) {
-    // $('.institution-content').height($(window).height() - 110);
-
+    $('.back-btn-general').attr('href', $cookies.get("backLinkHref"));
 
     $timeout(function() {
       $rootScope.pageTitle = "О ЗАВЕДЕНИИ";
@@ -22,13 +21,6 @@
       $('.logo').addClass('start-page-logo');
       $('.page-title').addClass('active');
     }, 100);
-
-
-
-    $rootScope.$on('$locationChangeStart', function(evt) {
-      // $('.page-title').removeClass('active');
-
-    });
 
     $rootScope.$on('$locationChangeSuccess', function(evt) {
       $timeout(function() {
@@ -52,20 +44,12 @@
       console.log(error);
     });
     var mySwiper = new Swiper('.swiper-container', {
-      // direction: 'horisontal',
-      touchRatio: 1,
-      // loop: true
-      // slidesPerView: 1,
-      // effect: 'fade',
-      // fadeEffect: {
-      //   crossFade: true
-      // },
+      touchRatio: 1
     });
 
     $timeout(function() {
       mySwiper.update();
     }, 1000);
-
 
   };
 

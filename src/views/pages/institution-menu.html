@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="inst-menu-list">
-        <div class="inst-menu-item" ng-repeat="kitchenItem in dataCafeInfo.placeMenu">
+        <div class="inst-menu-item" ng-repeat="kitchenItem in dataCafeInfo.placeMenu" ng-class="{'active':!toggled, 'active':toggled}" ng-click="toggled = !toggled">
           <div class="inst-menu-item-common">
             <div class="inst-menu-item-left">
               <div class="inst-menu-item-ico">

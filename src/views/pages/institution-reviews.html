@@ -1,7 +1,7 @@
 <section class="institution-reviews">
   <div class="container">
     <div class="inst-reviews-list">
-       <div class="institution-header">
+      <div class="institution-header">
         <div class="inst-logo"><img src="img/cafe_info/logo/{{dataCafeInfo.placeLogo}}" alt=""></div>
         <div class="inst-head-info">
           <div class="inst-head-rating">
@@ -14,39 +14,21 @@
           <div class="inst-head-name">{{dataCafeInfo.placeTitle}}</div>
         </div>
       </div>
-      <div class="inst-reviews-item">
+      <div class="inst-reviews-item" ng-repeat="comment in dataComments">
         <div class="inst-reviews-item-person">
-          <img src="img/person.png" alt="">
+          <img src="img/cafe_info/comments/{{comment.userPhoto}}" alt="">
         </div>
         <div class="inst-reviews-item-info">
-          <div class="inst-reviews-item-date">27.01.2017</div>
+          <div class="inst-reviews-item-date">{{comment.userDate}}</div>
           <div class="inst-reviews-item-rating">
-            <div class="star">
+            <div class="star" ng-repeat="it in getStarsCafeArr(+comment.userRate) track by $index">
               <svg class="icon-svg-star">
-                <!-- <svg class="icon-svg-star" ng-repeat="t in getTimes(item.placeRate) track by $index"> -->
                 <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
             </div>
           </div>
         </div>
-        <div class="inst-reviews-item-info-full"><span>Елена Ю.</span>: Неплохое заведение со своей публикой. Подходит для посиделок с компанией.Не скажу,что ресторан вместителен,но кухня и выбор алкоголя удовлетворим.После 22 кухня не работает,но вам предложат закуски.Играет DJ,после нескольких бокалов на месте не усидеть.</div>
-      </div>
-      <div class="inst-reviews-item">
-        <div class="inst-reviews-item-person">
-          <img src="img/person.png" alt="">
-        </div>
-        <div class="inst-reviews-item-info">
-          <div class="inst-reviews-item-date">27.01.2017</div>
-          <div class="inst-reviews-item-rating">
-            <div class="star">
-              <svg class="icon-svg-star">
-                <!-- <svg class="icon-svg-star" ng-repeat="t in getTimes(item.placeRate) track by $index"> -->
-                <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="inst-reviews-item-info-full"><span>Елена Ю.</span>: Неплохое заведение со своей публикой. Подходит для посиделок с компанией.Не скажу,что ресторан вместителен,но кухня и выбор алкоголя удовлетворим.После 22 кухня не работает,но вам предложат закуски.Играет DJ,после нескольких бокалов на месте не усидеть.</div>
+        <div class="inst-reviews-item-info-full"><span>{{comment.userName}}:</span> {{comment.userComment}}</div>
       </div>
     </div>
   </div>

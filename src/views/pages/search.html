@@ -1,19 +1,19 @@
 <section class="search-s1">
   <div class="container">
     <div class="search-page-field">
-      <input class="search-page-inp" type="text" placeholder="burger" />
+      <input class="search-page-inp" type="text" placeholder="burger" ng-model="searchText"/>
       <div class="sort-container">
-        <div class="sort-btn active">
-          <svg class="icon-svg-map-marker">
+        <div class="sort-btn active" ng-click="sortBy('placeDistance')">
+          <svg class="icon-svg-map-marker" >
             <use xlink:href="img/sprite.svg#map-marker" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </div>
-        <div class="sort-btn">
+        <div class="sort-btn" ng-click="sortBy('placeRate')">
           <svg class="icon-svg-star">
             <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </div>
-        <div class="sort-btn">
+        <div class="sort-btn" ng-click="sortBy('placePrice')">
           <svg class="icon-svg-baks">
             <use xlink:href="img/sprite.svg#baks" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
@@ -22,11 +22,11 @@
     </div>
    <div class="search-page-result-wrapper">
       <div class="search-page-result">
-       <a href="" ui-sref="cafe" class="search-page-result-item" ng-repeat="item in dataSearch"  ng-click="takePlaceId($event)" data-place-id="{{item.placeId}}">
+       <a href="" ui-sref="cafe" class="search-page-result-item" ng-repeat="item in dataSearch | filter:searchText | orderBy:propertyName:reverse"  ng-click="takePlaceId($event)" data-place-id="{{item.placeId}}">
          <div class="search-result-i-logo"><img src="img/cafe_info/logo/{{item.placeLogo}}" alt=""></div>
          <div class="search-result-i-info">
            <div class="search-result-i-rating">
-             <div class="star" ng-repeat="it in getStarsCafeArr(+item.placeRate) track by $index">
+             <div class="star" ng-repeat="it in getStarsCafeArr(+item.placeRate) track by $index" data-stars-n="{{item.placeRate}}">
                <svg class="icon-svg-star">
                  <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                </svg>

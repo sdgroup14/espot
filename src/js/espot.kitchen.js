@@ -12,6 +12,7 @@
   KitchenCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies', '$state', '$transitions'];
 
   function KitchenCtrl($scope, $rootScope, $timeout, $http, $cookies, $state, $transitions) {
+    
     // $rootScope.pageTitle = "ТИП КУХНИ";
     // // $('.kitchen-page-result-wrapper').show();
     // $scope.reloadState1 = function() {

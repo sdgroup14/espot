@@ -151,6 +151,34 @@ body {
     }
 }
 
+.view-wrap {
+ height: 100%;
+  position: relative;
+}
+
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 100500;
+}
+
+#page-preloader .spinner {
+  width: 132px;
+  height: 132px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -66px 0 0 -66px;
+  svg {
+    width: 132px;
+    height: 132px;
+  }
+}
+
 // .pac-item:hover {}
 
 // .pac-item-selected {}
