@@ -1226,7 +1226,8 @@ header {
   fill: #D6D9DE; }
 
 .institution-menu .inst-menu-list {
-  padding: 0 10px; }
+  padding: 0 10px;
+  margin-top: 10px; }
 
 .institution-menu .inst-menu-item {
   display: flex;

@@ -1,7 +1,7 @@
 <section class="institution-menu">
   <div class="container">
     <div class="institution-content">
-       <div class="institution-header">
+      <div class="institution-header">
         <div class="inst-logo"><img src="img/cafe_info/logo/{{dataCafeInfo.placeLogo}}" alt=""></div>
         <div class="inst-head-info">
           <div class="inst-head-rating">
@@ -17,31 +17,30 @@
       <div class="inst-menu-list">
         <div class="inst-menu-item" ng-repeat="kitchenItem in dataCafeInfo.placeMenu">
           <div class="inst-menu-item-common">
-          	<div class="inst-menu-item-left">
-          		<div class="inst-menu-item-ico">
-          		  <svg class="icon-svg-menu-first">
-          		    <!-- <use xlink:href="img/sprite.svg#menu-first" xmlns:xlink="http://www.w3.org/1999/xlink"></use> -->
-                                    <use xlink:href="img/sprite.svg#{{kitchenItem.itemId}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-
-          		  </svg>
-          		</div>
-          		<div class="inst-menu-item-name">{{kitchenItem.itemTitle}}</div>
-          	</div>
-          	<div class="inst-menu-item-right">
-          		<div class="inst-menu-item-weight">Вес</div>
-          		<div class="inst-menu-item-price">Цена</div>
-          	</div>
+            <div class="inst-menu-item-left">
+              <div class="inst-menu-item-ico">
+                <svg class="icon-svg-menu-{{kitchenItem.itemId}}">
+                  <!-- <use xlink:href="img/sprite.svg#menu-first" xmlns:xlink="http://www.w3.org/1999/xlink"></use> -->
+                  <use xlink:href="{{'img/sprite.svg#menu-' + kitchenItem.itemId}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </div>
+              <div class="inst-menu-item-name">{{kitchenItem.itemTitle}}</div>
+            </div>
+            <div class="inst-menu-item-right">
+              <div class="inst-menu-item-weight">Вес</div>
+              <div class="inst-menu-item-price">Цена</div>
+            </div>
           </div>
           <div class="menu-sub-list">
-          	<div class="menu-sub-list-item" ng-repeat="subKitchenItem in kitchenItem.itemData">
-          		<div class="menu-sub-item-left">
-          			<div class="menu-sub-item-name">{{subKitchenItem.title}}</div>
-          		</div>
-          		<div class="menu-sub-item-right">
-          			<div class="inst-menu-item-weight">{{subKitchenItem.price}}</div>
-          			<div class="inst-menu-item-price">{{subKitchenItem.weight}}</div>
-          		</div>
-          	</div>
+            <div class="menu-sub-list-item" ng-repeat="subKitchenItem in kitchenItem.itemData">
+              <div class="menu-sub-item-left">
+                <div class="menu-sub-item-name">{{subKitchenItem.title}}</div>
+              </div>
+              <div class="menu-sub-item-right">
+                <div class="inst-menu-item-weight">{{subKitchenItem.price}}</div>
+                <div class="inst-menu-item-price">{{subKitchenItem.weight}}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
