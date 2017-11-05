@@ -360,23 +360,15 @@ body {
   height: 100%;
   position: relative; }
 
-#page-preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #ffffff;
-  z-index: 100500; }
-
-#page-preloader .spinner {
+.spinner {
   width: 132px;
   height: 132px;
   position: absolute;
   left: 50%;
   top: 50%;
+  transform: translate(-50% -50%);
   margin: -66px 0 0 -66px; }
-  #page-preloader .spinner svg {
+  .spinner svg {
     width: 132px;
     height: 132px; }
 

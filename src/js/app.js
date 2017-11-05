@@ -21,11 +21,12 @@
     .controller('AppCtrl', AppCtrl)
     .config(Config);
 
+
   AppCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$transitions'];
 
   function AppCtrl($scope, $rootScope, $timeout, $transitions) {
 
-    
+
 
   };
 

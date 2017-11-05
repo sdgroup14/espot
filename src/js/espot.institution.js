@@ -11,6 +11,16 @@
   InstitutionCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
   function InstitutionCtrl($scope, $rootScope, $timeout, $http) {
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
     // $('.institution-content').height($(window).height() - 110);
     // console.log(CafeIdService.getId());
 

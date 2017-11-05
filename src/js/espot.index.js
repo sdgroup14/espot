@@ -12,6 +12,17 @@
   IndexCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
   function IndexCtrl($scope, $rootScope, $timeout, $http) {
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
+
     $('#findCity_input').val('');
 
     document.body.style.height = window.outerHeight + 'px';
@@ -32,10 +43,10 @@
 
     $rootScope.$on('$locationChangeSuccess', function(evt) {
       $timeout(function() {
-       $('.page-title').removeClass('active');
-      $('.nav-1').removeClass('nav-show');
-      $('.nav-2').removeClass('nav-show');
-      $('.logo').removeClass('start-page-logo');
+        $('.page-title').removeClass('active');
+        $('.nav-1').removeClass('nav-show');
+        $('.nav-2').removeClass('nav-show');
+        $('.logo').removeClass('start-page-logo');
       }, 100);
     });
 
@@ -63,31 +74,12 @@
     });
 
 
-    $('.back-link').on('click', function(){
+    $('.back-link').on('click', function() {
       $(this).fadeOut();
       $('.first-step-auth, .second-step-auth').removeClass('active');
     });
 
-//     $rootScope.$on('$viewContentLoading', 
-// function(event, viewConfig){ 
-//        var $preloader = $('#page-preloader'),
-//           $spinner = $preloader.find('.spinner');
-//         $spinner.delay(1).fadeIn();
-//         $preloader.delay(1).fadeIn();
-// });
 
-
-
-//     $scope.$on('$viewContentLoaded', 
-// function(event){
-//   $timeout(function() {
-//     var $preloader = $('#page-preloader'),
-//           $spinner = $preloader.find('.spinner');
-//         $spinner.delay(1).fadeOut();
-//         $preloader.delay(1).fadeOut('slow');
-//       }, 1);
-
-//   });
 
 
   };

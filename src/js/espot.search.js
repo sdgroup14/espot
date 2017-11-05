@@ -13,6 +13,27 @@
   SearchCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$state', '$cookies'];
 
   function SearchCtrl($scope, $rootScope, $timeout, $http, $state, $cookies) {
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
+    // $rootScope.$on('$viewContentLoading',
+    //   function(event, viewConfig) {
+    //     $('.spinner').fadeIn(1);
+    //   });
+
+
+
+    // $scope.$on('$viewContentLoaded',
+    //   function(event) {
+    //     $('.spinner').fadeOut(100);
+    //   });
 
     $scope.takePlaceId = function(item) {
       $cookies.put("cookiesCafeId", item.currentTarget.getAttribute("data-place-id"));
@@ -54,9 +75,9 @@
       return new Array(n);
     };
 
-        $scope.propertyName = 'placePrice';
-        $scope.propertyName = 'placeRate';
-        $scope.propertyName = 'placeDistance';
+    $scope.propertyName = 'placePrice';
+    $scope.propertyName = 'placeRate';
+    $scope.propertyName = 'placeDistance';
     $scope.reverse = !true;
     // $scope.friends = friends;
 
@@ -66,7 +87,7 @@
       // $('.sort-btn').removeClass('active');
     };
 
-    $('.sort-btn').on('click',function(){
+    $('.sort-btn').on('click', function() {
       $('.sort-btn').removeClass('active');
       $(this).addClass('active');
     });

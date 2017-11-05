@@ -12,6 +12,16 @@
   KitchenResultCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies', '$state', '$transitions'];
 
   function KitchenResultCtrl($scope, $rootScope, $timeout, $http, $cookies, $state, $transitions) {
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
     $rootScope.pageTitle = $cookies.get("cookiesKitchenCategoryTitle");
 
     $timeout(function() {

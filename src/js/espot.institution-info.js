@@ -12,6 +12,16 @@
   InstitutionInfoCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
   function InstitutionInfoCtrl($scope, $rootScope, $timeout, $http, $cookies) {
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
     $('.back-btn-general').attr('href', $cookies.get("backLinkHref"));
 
     $timeout(function() {

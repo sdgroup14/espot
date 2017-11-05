@@ -12,6 +12,16 @@
   InstitutionMapCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
   function InstitutionMapCtrl($scope, $rootScope, $timeout, $http, $cookies) {
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
     // $('.institution-content').height($(window).height() - 110);
     // $('#dir-map').height($('.institution-map .institution-content').height() - $('.institution-map .institution-header').height());
 

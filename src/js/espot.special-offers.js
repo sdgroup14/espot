@@ -12,6 +12,16 @@
   specialOffersCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
   function specialOffersCtrl($scope, $rootScope, $timeout, $http) {
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
     // $('.kitchen-page-result').height($(window).height() - 190);
 // console.log(CafeIdService.getId());
 // console.log($scope.data);

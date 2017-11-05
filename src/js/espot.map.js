@@ -12,6 +12,16 @@
   MapCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
   function MapCtrl($scope, $rootScope, $timeout, $http, CafeIdService) {
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
     // $('.institution-content').height($(window).height() - 110);
     // console.log(CafeIdService.getId());
     // $('#mapAll').height($('.map .container').height());

@@ -12,7 +12,27 @@
   KitchenCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies', '$state', '$transitions'];
 
   function KitchenCtrl($scope, $rootScope, $timeout, $http, $cookies, $state, $transitions) {
-    
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
+    // $rootScope.$on('$viewContentLoading',
+    //   function(event, viewConfig) {
+    //     $('.spinner').fadeIn(1);
+    //   });
+
+    // $scope.$on('$viewContentLoaded',
+    //   function(event) {
+    //     $('.spinner').fadeOut(1);
+
+    //   });
+
     // $rootScope.pageTitle = "ТИП КУХНИ";
     // // $('.kitchen-page-result-wrapper').show();
     // $scope.reloadState1 = function() {
@@ -23,29 +43,29 @@
     // console.log($state.current);
 
 
- //   $rootScope.$on("$locationChangeStart", function (event, toState, toParams, fromState, fromParams) 
- // {
+    //   $rootScope.$on("$locationChangeStart", function (event, toState, toParams, fromState, fromParams) 
+    // {
 
- //    if (toState.name === $rootScope.previousState )
- //       { 
- //          // u can any 1 or all of below 3 statements
- //         // event.preventDefault();  // to Disable the event
- //         // $state.go('someDefaultState'); //As some popular banking sites are using 
- //         console.log("Back button Clicked");
+    //    if (toState.name === $rootScope.previousState )
+    //       { 
+    //          // u can any 1 or all of below 3 statements
+    //         // event.preventDefault();  // to Disable the event
+    //         // $state.go('someDefaultState'); //As some popular banking sites are using 
+    //         console.log("Back button Clicked");
 
- //       }
- // else
- //      $rootScope.previousState= fromState.name;
- //   });
+    //       }
+    // else
+    //      $rootScope.previousState= fromState.name;
+    //   });
 
-   //   $rootScope.$on("$locationChangeSuccess", function (event, toState, toParams, fromState, fromParams) 
-   // {
+    //   $rootScope.$on("$locationChangeSuccess", function (event, toState, toParams, fromState, fromParams) 
+    // {
 
-   //      $rootScope.previousStatus = fromState.name;
-   //      if() {
-          
-   //      }
-   //  });
+    //      $rootScope.previousStatus = fromState.name;
+    //      if() {
+
+    //      }
+    //  });
 
 
     // $('body').on('click', '.kitchen-category-item', function() {
@@ -54,28 +74,28 @@
     // });
 
 
-//     $transitions.onStart({}, function(){
-//     // console.log('1')
-// });
+    //     $transitions.onStart({}, function(){
+    //     // console.log('1')
+    // });
 
-//     $timeout(function() {
-//       $('.nav-1').addClass('nav-show');
-//       $('.nav-2').removeClass('nav-show');
-//       $('.logo').addClass('start-page-logo');
-//       $('.page-title').addClass('active');
+    //     $timeout(function() {
+    //       $('.nav-1').addClass('nav-show');
+    //       $('.nav-2').removeClass('nav-show');
+    //       $('.logo').addClass('start-page-logo');
+    //       $('.page-title').addClass('active');
 
-//     }, 100);
+    //     }, 100);
 
-//     $rootScope.$on('$locationChangeSuccess', function(evt) {
-//       $timeout(function() {
-//         $('.nav-1').addClass('nav-show');
-//         $('.nav-2').removeClass('nav-show');
-//         $('.logo').addClass('start-page-logo');
-//         $('.page-title').addClass('active');
-//         // $cookies.put("cookiesKitchenResultId", '');
+    //     $rootScope.$on('$locationChangeSuccess', function(evt) {
+    //       $timeout(function() {
+    //         $('.nav-1').addClass('nav-show');
+    //         $('.nav-2').removeClass('nav-show');
+    //         $('.logo').addClass('start-page-logo');
+    //         $('.page-title').addClass('active');
+    //         // $cookies.put("cookiesKitchenResultId", '');
 
-//       }, 100);
-//     });
+    //       }, 100);
+    //     });
 
 
 
@@ -97,7 +117,7 @@
     // };
 
 
-  
+
 
   };
 

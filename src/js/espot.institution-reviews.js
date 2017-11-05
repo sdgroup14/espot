@@ -12,6 +12,16 @@
   InstitutionReviewsCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
   function InstitutionReviewsCtrl($scope, $rootScope, $timeout, $http, $cookies) {
+        $rootScope.$on('$viewContentLoading',
+      function(event, viewConfig) {
+        $('.spinner').fadeIn(1);
+      });
+
+
+    $scope.$on('$viewContentLoaded',
+      function(event) {
+        $('.spinner').fadeOut(1);
+      });
 
     $timeout(function() {
       $rootScope.pageTitle = "Отзывы";
