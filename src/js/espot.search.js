@@ -21,13 +21,15 @@
   //     }
   // });
 
-  SearchCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
+  SearchCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$state', '$cookies'];
 
-  function SearchCtrl($scope, $rootScope, $timeout, $http, $cookies) {
+  function SearchCtrl($scope, $rootScope, $timeout, $http, $state, $cookies) {
     // $('.search-page-result').height($(window).height() - 190);
 
     $scope.takePlaceId = function(item) {
       $cookies.put("cookiesCafeId", item.currentTarget.getAttribute("data-place-id"));
+      $rootScope.btnHref = $state.current.name;
+      $('.back-btn-general').attr('href', '#!/' + $state.current.name);
     };
 
     $timeout(function() {
@@ -70,6 +72,9 @@
       return new Array(n);
     };
 
+    // $rootScope.backMenuBtnUrl = function() { 
+    //   $rootScope.btnHref = $state.current;
+    // };
   };
 
   function config($stateProvider, $urlRouterProvider) {

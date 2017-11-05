@@ -42,6 +42,7 @@
  
         $scope.takePlaceId = function(item) {
       $cookies.put("cookiesCafeId", item.currentTarget.getAttribute("data-place-id"));
+      $('.back-btn-general').attr('href', '#!/kitchen/kitchen-result');
     };
 
 
