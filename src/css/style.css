@@ -916,6 +916,7 @@ header {
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
   overflow: auto;
   border-radius: 3px;
+  height: 100%;
   /* Track */
   /* Handle */ }
   .institution-info .institution-content::-webkit-scrollbar {
@@ -1167,6 +1168,7 @@ header {
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
   overflow: auto;
   border-radius: 3px;
+  height: 100%;
   /* Track */
   /* Handle */ }
   .institution-menu .institution-content::-webkit-scrollbar {
@@ -1470,63 +1472,70 @@ header {
   letter-spacing: 0.13px;
   color: #606060; }
 
-.institution-map .institution-content {
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-  filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
-  overflow: auto;
-  border-radius: 3px;
-  /* Track */
-  /* Handle */ }
-  .institution-map .institution-content::-webkit-scrollbar {
-    width: 2px !important; }
-  .institution-map .institution-content::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
-    -webkit-border-radius: 10px !important;
-    border-radius: 10px !important; }
-  .institution-map .institution-content::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px !important;
-    border-radius: 10px !important;
-    background: #41617D !important;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important; }
-  .institution-map .institution-content::-webkit-scrollbar-thumb:window-inactive {
-    background: #41617D !important; }
-
-.institution-map .institution-header {
-  position: relative;
-  height: 52px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 10px; }
-
-.institution-map .inst-logo {
-  min-width: 50px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center; }
-  .institution-map .inst-logo img {
-    max-width: 30px;
-    width: 100%; }
-
-.institution-map .inst-head-rating {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; }
-  .institution-map .inst-head-rating .star {
-    margin-right: 2px; }
-  .institution-map .inst-head-rating .icon-svg-star {
-    width: 9px;
-    height: 9px;
-    fill: #FFC300; }
-
-.institution-map .inst-head-name {
-  font-size: 14px;
-  letter-spacing: 0.14px;
-  color: #757A80; }
-
-.institution-map #dir-map {
-  display: block;
-  width: 100%; }
+.institution-map {
+  position: relative; }
+  .institution-map .container {
+    position: relative;
+    height: 100%; }
+  .institution-map .institution-content {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
+    overflow: auto;
+    border-radius: 3px;
+    height: 100%;
+    padding-top: 52px;
+    position: relative;
+    /* Track */
+    /* Handle */ }
+    .institution-map .institution-content::-webkit-scrollbar {
+      width: 2px !important; }
+    .institution-map .institution-content::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+      -webkit-border-radius: 10px !important;
+      border-radius: 10px !important; }
+    .institution-map .institution-content::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px !important;
+      border-radius: 10px !important;
+      background: #41617D !important;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important; }
+    .institution-map .institution-content::-webkit-scrollbar-thumb:window-inactive {
+      background: #41617D !important; }
+  .institution-map .institution-header {
+    position: relative;
+    height: 52px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 10px; }
+  .institution-map .inst-logo {
+    min-width: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .institution-map .inst-logo img {
+      max-width: 30px;
+      width: 100%; }
+  .institution-map .inst-head-rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    .institution-map .inst-head-rating .star {
+      margin-right: 2px; }
+    .institution-map .inst-head-rating .icon-svg-star {
+      width: 9px;
+      height: 9px;
+      fill: #FFC300; }
+  .institution-map .inst-head-name {
+    font-size: 14px;
+    letter-spacing: 0.14px;
+    color: #757A80; }
+  .institution-map #dir-map {
+    display: block;
+    width: 100%;
+    height: 100%; }
 
 .map {
   padding-right: 6px;

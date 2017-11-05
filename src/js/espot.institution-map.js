@@ -12,8 +12,8 @@
   InstitutionMapCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
   function InstitutionMapCtrl($scope, $rootScope, $timeout, $http, $cookies) {
-    $('.institution-content').height($(window).height() - 110);
-    $('#dir-map').height($('.institution-map .institution-content').height() - $('.institution-map .institution-header').height());
+    // $('.institution-content').height($(window).height() - 110);
+    // $('#dir-map').height($('.institution-map .institution-content').height() - $('.institution-map .institution-header').height());
 
 
     $timeout(function() {

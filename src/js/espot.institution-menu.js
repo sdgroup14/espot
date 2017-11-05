@@ -11,7 +11,7 @@
   InstitutionMenuCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
   function InstitutionMenuCtrl($scope, $rootScope, $timeout, $http, $cookies) {
-    $('.institution-content').height($(window).height() - 110);
+    // $('.institution-content').height($(window).height() - 110);
 
 
     $timeout(function(){

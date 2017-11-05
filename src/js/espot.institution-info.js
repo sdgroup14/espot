@@ -12,7 +12,7 @@
   InstitutionInfoCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
   function InstitutionInfoCtrl($scope, $rootScope, $timeout, $http, $cookies) {
-    $('.institution-content').height($(window).height() - 110);
+    // $('.institution-content').height($(window).height() - 110);
 
 
     $timeout(function() {
