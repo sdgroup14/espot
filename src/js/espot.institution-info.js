@@ -24,6 +24,7 @@
     }, 100);
 
 
+
     $rootScope.$on('$locationChangeStart', function(evt) {
       // $('.page-title').removeClass('active');
 
@@ -50,7 +51,6 @@
     }, function(error) {
       console.log(error);
     });
-
     var mySwiper = new Swiper('.swiper-container', {
       // direction: 'horisontal',
       touchRatio: 1,

@@ -1083,22 +1083,18 @@ header {
     display: block;
     fill: #D6D9DE;
     margin-right: 22px; }
-
-.institution-info .icon-svg-cash {
-  width: 23px;
-  height: 23px; }
-
-.institution-info .icon-svg-card {
-  width: 33px;
-  height: 21px; }
-
-.institution-info .icon-svg-drive {
-  width: 34px;
-  height: 21px; }
-
-.institution-info .icon-svg-deliver {
-  width: 28px;
-  height: 23px; }
+  .institution-info .inst-services .icon-svg-cash {
+    width: 23px;
+    height: 23px; }
+  .institution-info .inst-services .icon-svg-card {
+    width: 33px;
+    height: 21px; }
+  .institution-info .inst-services .icon-svg-drive {
+    width: 34px;
+    height: 21px; }
+  .institution-info .inst-services .icon-svg-deliver {
+    width: 28px;
+    height: 23px; }
 
 .institution-info .inst-header {
   display: flex;

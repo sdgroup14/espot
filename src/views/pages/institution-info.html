@@ -58,10 +58,10 @@
         <div class="work-time-item weekend"><span>{{dataCafeInfo.placeHours[1].days}}:</span> {{dataCafeInfo.placeHours[0].hours}}</div>
       </div>
       <div class="inst-services">
-        <!-- <svg ng-class="icon-svg-{{i}}" ng-repeat="i in dataCafeInfo.placeService">
-          <use xlink:href="img/sprite.svg#{{i}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg> -->
-        <svg class="icon-svg-purse">
+        <svg class="icon-svg-{{i}}" ng-repeat="i in dataCafeInfo.placeService">
+          <use xlink:href="{{'img/sprite.svg#' + i}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+ <!--        <svg class="icon-svg-purse">
           <use xlink:href="img/sprite.svg#purse" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
         </svg>
         <svg class="icon-svg-card">
@@ -72,7 +72,7 @@
         </svg>
         <svg class="icon-svg-delivery">
           <use xlink:href="img/sprite.svg#delivery" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
+        </svg> -->
       </div>
       <h2 class="inst-header">
         <svg class="icon-svg-kitchen-2">
