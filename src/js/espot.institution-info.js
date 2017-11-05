@@ -25,7 +25,7 @@
 
 
     $rootScope.$on('$locationChangeStart', function(evt) {
-      $('.page-title').removeClass('active');
+      // $('.page-title').removeClass('active');
 
     });
 
@@ -56,10 +56,10 @@
       touchRatio: 1,
       // loop: true
       // slidesPerView: 1,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
+      // effect: 'fade',
+      // fadeEffect: {
+      //   crossFade: true
+      // },
     });
 
     $timeout(function() {

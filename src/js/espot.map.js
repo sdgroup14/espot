@@ -14,9 +14,8 @@
   function MapCtrl($scope, $rootScope, $timeout, $http, CafeIdService) {
     // $('.institution-content').height($(window).height() - 110);
     // console.log(CafeIdService.getId());
-
-
-    $timeout(function() {
+    // $('#mapAll').height($('.map .container').height());
+$timeout(function() {
       $rootScope.pageTitle = "Карта заведений";
       $('.nav-2').removeClass('nav-show');
       $('.nav-1').addClass('nav-show');
@@ -26,7 +25,7 @@
 
 
     $rootScope.$on('$locationChangeStart', function(evt) {
-      $('.page-title').removeClass('active');
+      // $('.page-title').removeClass('active');
 
     });
 

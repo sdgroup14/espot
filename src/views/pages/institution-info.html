@@ -2,7 +2,7 @@
   <div class="container">
     <div class="institution-content">
       <div class="institution-header">
-        <div class="inst-logo"><img src="{{dataCafeInfo.placeLogo}}" alt=""></div>
+        <div class="inst-logo"><img src="img/cafe_info/logo/{{dataCafeInfo.placeLogo}}" alt=""></div>
         <div class="inst-head-info">
           <div class="inst-head-rating">
             <div class="star" ng-repeat="i in getStarsCafeArr(starsNum) track by $index">
@@ -17,7 +17,7 @@
       <div class="institution-cover">
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" ng-repeat="i in dataCafeInfo.placeGallery"><img src="{{i}}" alt=""></div>
+            <div class="swiper-slide" ng-repeat="i in dataCafeInfo.placeGallery"><img src="img/cafe_info/gallery/{{i}}" alt=""></div>
           </div>
         </div>
       </div>

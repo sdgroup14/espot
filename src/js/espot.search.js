@@ -28,7 +28,6 @@
 
     $scope.takePlaceId = function(item) {
       $cookies.put("cookiesCafeId", item.currentTarget.getAttribute("data-place-id"));
-      // console.log($cookies.get("cookiesCafeId"));
     };
 
     $timeout(function() {
@@ -36,11 +35,11 @@
       $('.nav-2').removeClass('nav-show');
       $('.nav-1').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
-      $('.page-title').addClass('active');
+      // $('.page-title').addClass('active');
     }, 100);
 
     $rootScope.$on('$locationChangeStart', function(evt) {
-      $('.page-title').removeClass('active');
+      // $('.page-title').removeClass('active');
     });
 
     $rootScope.$on('$locationChangeSuccess', function(evt) {
@@ -48,7 +47,7 @@
         $('.nav-2').removeClass('nav-show');
         $('.nav-1').addClass('nav-show');
         $('.logo').addClass('start-page-logo');
-        $('.page-title').addClass('active');
+        // $('.page-title').addClass('active');
       }, 100);
     });
 

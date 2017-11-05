@@ -4,7 +4,7 @@
 .index-s1 .btn-place-s-txt, .index-s1 .btn-place-s-txt-1, .index-s1 .index-menu-item span, .search-s1 .search-page-inp, .search-s1 .search-page-result-i-dist, .search-s1 .search-result-i-dist__val, .search-s1 .search-page-btn, .kitchen-s1 .kitchen-category-val, .kitchen-s1 .kitchen-category-item-count, .kitchen-s1 .kitchen-page-btn span, .institution-info .inst-adr span, .institution-info .work-time-item, .institution-info .inst-kitchen-info-item, .institution-info .inst-info, .institution-menu .inst-menu-item-right, .institution-menu .inst-menu-item-name, .institution-menu .menu-sub-list-item, .institution-reviews .inst-reviews-item-info-full {
   font-family: "SFPDisplayLight"; }
 
-header .page-title, .nav-2 .nav-item span, .index-s1 .back-link, .search-s1 .search-result-i-name, .kitchen-s1 .kitchen-category-item-name, .institution-info .inst-head-name, .institution-info .work-time-item span, .institution-menu .inst-head-name, .institution-reviews .inst-head-name, .institution-reviews .inst-reviews-item-date, .institution-reviews .inst-reviews-item-info-full span {
+header .page-title, .nav-2 .nav-item span, .index-s1 .back-link, .search-s1 .search-result-i-name, .kitchen-s1 .kitchen-category-item-name, .institution-info .inst-head-name, .institution-info .work-time-item span, .institution-menu .inst-head-name, .institution-reviews .inst-head-name, .institution-reviews .inst-reviews-item-date, .institution-reviews .inst-reviews-item-info-full span, .institution-map .inst-head-name {
   font-family: "SFPDisplayMedium"; }
 
 /*
@@ -945,7 +945,8 @@ header {
   justify-content: flex-start;
   align-items: center; }
   .institution-info .inst-logo img {
-    min-width: 30px; }
+    max-width: 30px;
+    width: 100%; }
 
 .institution-info .inst-head-rating {
   display: flex;
@@ -1107,6 +1108,7 @@ header {
   margin-bottom: 8px; }
   .institution-info .inst-header span {
     font-size: 13px;
+    line-height: 1;
     letter-spacing: 0.13px;
     text-transform: uppercase;
     color: #CACCD1; }
@@ -1190,8 +1192,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 10px;
-  margin-bottom: 15px; }
+  padding: 0 10px; }
 
 .institution-menu .inst-logo {
   min-width: 50px;
@@ -1199,7 +1200,8 @@ header {
   justify-content: flex-start;
   align-items: center; }
   .institution-menu .inst-logo img {
-    min-width: 30px; }
+    max-width: 30px;
+    width: 100%; }
 
 .institution-menu .inst-head-rating {
   display: flex;
@@ -1380,9 +1382,7 @@ header {
   height: 52px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  padding: 0 10px;
-  margin-bottom: 15px; }
+  align-items: center; }
 
 .institution-reviews .inst-logo {
   min-width: 50px;
@@ -1390,7 +1390,8 @@ header {
   justify-content: flex-start;
   align-items: center; }
   .institution-reviews .inst-logo img {
-    min-width: 30px; }
+    max-width: 30px;
+    width: 100%; }
 
 .institution-reviews .inst-head-rating {
   display: flex;
@@ -1428,7 +1429,7 @@ header {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 0 0 15px 60px;
+  padding: 0 0 15px 50px;
   margin-top: 15px; }
   .institution-reviews .inst-reviews-item:first-of-type {
     margin-top: 0; }
@@ -1471,16 +1472,78 @@ header {
   letter-spacing: 0.13px;
   color: #606060; }
 
+.institution-map .institution-content {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
+  overflow: auto;
+  border-radius: 3px;
+  /* Track */
+  /* Handle */ }
+  .institution-map .institution-content::-webkit-scrollbar {
+    width: 2px !important; }
+  .institution-map .institution-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important; }
+  .institution-map .institution-content::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important;
+    background: #41617D !important;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important; }
+  .institution-map .institution-content::-webkit-scrollbar-thumb:window-inactive {
+    background: #41617D !important; }
+
+.institution-map .institution-header {
+  position: relative;
+  height: 52px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10px; }
+
+.institution-map .inst-logo {
+  min-width: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .institution-map .inst-logo img {
+    max-width: 30px;
+    width: 100%; }
+
+.institution-map .inst-head-rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+  .institution-map .inst-head-rating .star {
+    margin-right: 2px; }
+  .institution-map .inst-head-rating .icon-svg-star {
+    width: 9px;
+    height: 9px;
+    fill: #FFC300; }
+
+.institution-map .inst-head-name {
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  color: #757A80; }
+
 .institution-map #dir-map {
   display: block;
-  width: 100%;
-  height: 400px;
-  margin: 20px auto; }
+  width: 100%; }
 
-.map #mapAll {
-  display: block;
-  width: 100%;
-  height: 400px;
-  margin: 20px auto; }
+.map {
+  padding-right: 6px;
+  padding-left: 6px; }
+  .map .container {
+    height: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
+    overflow: auto;
+    border-radius: 3px;
+    position: relative;
+    padding: 0; }
+  .map #mapAll {
+    display: block;
+    width: 100%;
+    height: 100%; }
 
 /*# sourceMappingURL=style.css.map */

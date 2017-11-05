@@ -26,7 +26,7 @@
 
 
     $rootScope.$on('$locationChangeStart', function(evt) {
-      $('.page-title').removeClass('active');
+      // $('.page-title').removeClass('active');
 
     });
 

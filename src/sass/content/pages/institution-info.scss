@@ -51,7 +51,9 @@
     align-items: center;
 
     img {
-      min-width: 30px;
+      // min-width: 30px;
+      max-width: 30px;
+      width: 100%;
     }
   }
 
@@ -277,6 +279,7 @@
     span {
       @extend %sb;
       font-size: 13px;
+          line-height: 1;
       letter-spacing: 0.13px;
       text-transform: uppercase;
       color: #CACCD1;

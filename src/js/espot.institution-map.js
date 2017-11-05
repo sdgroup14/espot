@@ -13,6 +13,7 @@
 
   function InstitutionMapCtrl($scope, $rootScope, $timeout, $http, $cookies) {
     $('.institution-content').height($(window).height() - 110);
+    $('#dir-map').height($('.institution-map .institution-content').height() - $('.institution-map .institution-header').height());
 
 
     $timeout(function() {
@@ -25,7 +26,7 @@
 
 
     $rootScope.$on('$locationChangeStart', function(evt) {
-      $('.page-title').removeClass('active');
+      // $('.page-title').removeClass('active');
 
     });
 
@@ -46,6 +47,8 @@
       data: '{"id":' + $cookies.get("cookiesCafeId") + '}',
       url: 'https://api.icreations.agency/cafe'
     }).then(function(response) {
+      $scope.getStarsCafeArr = Array;
+      $scope.starsNum = +response.data.placeRate;
       $scope.dataCafeInfo = response.data;
       coordsCurLat = $scope.dataCafeInfo.placeLat * 1;
       coordsCurLng = $scope.dataCafeInfo.placeLng * 1;

@@ -19,11 +19,11 @@
       $('.nav-2').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
       $('.page-title').addClass('active');
-      }, 500);
+      }, 100);
 
 
     $rootScope.$on('$locationChangeStart', function(evt) {
-      $('.page-title').removeClass('active');
+      // $('.page-title').removeClass('active');
 
     });
 
@@ -33,7 +33,7 @@
       $('.logo').addClass('start-page-logo');
       $('.page-title').addClass('active');
 
-      }, 500);
+      }, 100);
     });
 
   //     $scope.isActive = false;

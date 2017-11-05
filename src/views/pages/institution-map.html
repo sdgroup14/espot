@@ -1,6 +1,19 @@
 <section class="institution-map">
   <div class="container">
     <div class="institution-content">
+      <div class="institution-header">
+        <div class="inst-logo"><img src="img/cafe_info/logo/{{dataCafeInfo.placeLogo}}" alt=""></div>
+        <div class="inst-head-info">
+          <div class="inst-head-rating">
+            <div class="star" ng-repeat="i in getStarsCafeArr(starsNum) track by $index">
+              <svg class="icon-svg-star">
+                <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="inst-head-name">{{dataCafeInfo.placeTitle}}</div>
+        </div>
+      </div>
       <div id="dir-map"></div>
     </div>
   </div>
