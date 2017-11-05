@@ -80,6 +80,59 @@
     });
 
 
+    $scope.toSerchTown = function () {
+    var input = document.getElementById('findCity_input');
+    var searchbox = new google.maps.places.SearchBox(input, { types: ['(cities)'] });
+    //var autocomplete = new google.maps.places.Autocomplete(input);
+    /*
+    var searchbox = new google.maps.places.Autocomplete(input, {
+        componentRestrictions: { country: 'fr' }
+    });
+    */
+
+
+    google.maps.event.addListener(searchbox, 'places_changed', function() {
+      var placeInfo = searchbox.getPlaces();
+
+      var place = new Object;
+      place.viewport = new Object;
+      place.geometry = new Object;
+      place.place_id = placeInfo[0].place_id;
+      place.vicinity = placeInfo[0].vicinity;
+      place.name = placeInfo[0].name;
+      place.formatted_address = placeInfo[0].formatted_address;
+      place.viewport.sw = { 'Lat': placeInfo[0].geometry.viewport.f.b, 'Lng': placeInfo[0].geometry.viewport.b.b };
+      place.viewport.ne = { 'Lat': placeInfo[0].geometry.viewport.f.f, 'Lng': placeInfo[0].geometry.viewport.b.f };
+      place.geometry.lat = placeInfo[0].geometry.location.lat();
+      place.geometry.lng = placeInfo[0].geometry.location.lng();
+      console.log(place);
+      $('.btn-place-s-txt').text(place.name);
+      $('.btn-place-next').addClass('active');
+      $('#findCity_input').blur();
+      $('.search_field').removeClass('show-search_field');
+      /*
+      var service = new google.maps.places.PlacesService(input);
+      var request = {
+        placeId: place.place_id
+      };
+
+      service.getDetails(request, getDetails);
+
+      function getDetails (place, status) {
+          console.log(place);
+      }
+      */
+    });
+
+
+
+    /*var viewport = new google.maps.LatLngBounds(
+        new google.maps.LatLng(southLat, westLng),
+        new google.maps.LatLng(northLat, eastLng)
+    );*/
+  }
+
+
 
 
   };
