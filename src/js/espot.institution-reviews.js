@@ -11,7 +11,7 @@
   InstitutionReviewsCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http', '$cookies'];
 
   function InstitutionReviewsCtrl($scope, $rootScope, $timeout, $http, $cookies) {
-    $('.inst-reviews-list').height($(window).height() - 110);
+    // $('.inst-reviews-list').height($(window).height() - 110);
 
 
     $timeout(function(){

@@ -2,22 +2,22 @@
   'use strict';
 
   angular
-    .module('espot.kitchen', [
+    .module('espot.special-offers', [
       'ui.router',
       'ngAnimate'
     ])
     .config(['$stateProvider', '$urlRouterProvider', config])
-    .controller('KitchenCtrl', KitchenCtrl);
+    .controller('specialOffersCtrl', specialOffersCtrl);
 
-  KitchenCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
+  specialOffersCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
-  function KitchenCtrl($scope, $rootScope, $timeout, $http) {
+  function specialOffersCtrl($scope, $rootScope, $timeout, $http) {
     // $('.kitchen-page-result').height($(window).height() - 190);
 // console.log(CafeIdService.getId());
 // console.log($scope.data);
     // console.log(data.firstName);
     $timeout(function() {
-      $rootScope.pageTitle = "ТИП КУХНИ";
+      $rootScope.pageTitle = "Специальные предложения";
       $('.nav-1').addClass('nav-show');
       $('.nav-2').removeClass('nav-show');
       $('.logo').addClass('start-page-logo');
@@ -63,10 +63,10 @@
   function config($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
-      .state('kitchen', {
-        url: '/kitchen',
-        templateUrl: '../views/pages/kitchen.html',
-        controller: KitchenCtrl
+      .state('special-offers', {
+        url: '/special-offers',
+        templateUrl: '../views/pages/special-offers.html',
+        controller: specialOffersCtrl
       })
   };
 })();

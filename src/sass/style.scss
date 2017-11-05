@@ -44,6 +44,8 @@ body {
   max-width: 640px;
   // max-height: 640px;
   margin: 0 auto;
+  // max-height: 100vh;
+  position: relative;
 }
 
 section {
@@ -51,7 +53,7 @@ section {
   position: relative;
   margin: 0 auto;
   padding: 51px 0;
-  height: 100vh;
+  height: 100%;
 }
 html,
 body {
@@ -123,6 +125,8 @@ body {
 }
 
 .view-content{
+  height: 100%;
+  position: relative;
     &.ng-animate {
         transition: all 0.5s ease-in-out;
         // position: absolute;
@@ -161,6 +165,8 @@ body {
 @import "content/pages/search";
 
 @import "content/pages/kitchen";
+
+@import "content/pages/special-offers";
 
 @import "content/pages/institution-info";
 @import "content/pages/institution-menu";

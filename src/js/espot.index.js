@@ -13,6 +13,8 @@
 
   function IndexCtrl($scope, $rootScope, $timeout, $http) {
 
+    document.body.style.height = window.outerHeight + 'px';
+
     $timeout(function() {
       $('.page-title').removeClass('active');
       $('.nav-1').removeClass('nav-show');

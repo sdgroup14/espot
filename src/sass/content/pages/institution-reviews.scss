@@ -9,6 +9,7 @@
     filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
     overflow: auto;
     border-radius: 3px; // padding: 15px 0;
+    height: 100%;
     &::-webkit-scrollbar {
       width: 2px !important;
     }
