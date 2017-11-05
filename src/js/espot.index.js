@@ -12,6 +12,7 @@
   IndexCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$http'];
 
   function IndexCtrl($scope, $rootScope, $timeout, $http) {
+    $('#findCity_input').val('');
 
     document.body.style.height = window.outerHeight + 'px';
 

@@ -9,6 +9,8 @@
       'espot.index',
       'espot.search',
       'espot.kitchen',
+      'espot.kitchen-result',
+      'espot.kitchen-list',
       'espot.special-offers',
       'espot.institution',
       'espot.map',
@@ -32,9 +34,13 @@
 //     }
 // });
 
-  AppCtrl.$inject = ['$scope', '$rootScope', '$timeout'];
+  AppCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$transitions'];
 
-  function AppCtrl($scope, $rootScope, $timeout) {
+  function AppCtrl($scope, $rootScope, $timeout, $transitions) {
+
+//   $transitions.onStart({from:'kitchen-result'}, function(){
+//     $('.kitchen-page-result-wrapper').show();
+// });
 
     //         $timeout(function(){
     //    $('nav').removeClass('nav-show');

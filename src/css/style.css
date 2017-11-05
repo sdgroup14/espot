@@ -1,10 +1,10 @@
 .index-s1 .login-header, .institution-info .inst-dist, .institution-info .act-btns span, .institution-info .inst-header span {
   font-family: "SFPDisplayBold"; }
 
-.index-s1 .btn-place-s-txt, .index-s1 .btn-place-s-txt-1, .index-s1 .index-menu-item span, .search-s1 .search-page-inp, .search-s1 .search-page-result-i-dist, .search-s1 .search-result-i-dist__val, .search-s1 .search-page-btn, .kitchen-s1 .kitchen-category-val, .kitchen-s1 .kitchen-category-item-count, .kitchen-s1 .kitchen-page-btn span, .institution-info .inst-adr span, .institution-info .work-time-item, .institution-info .inst-kitchen-info-item, .institution-info .inst-info, .institution-menu .inst-menu-item-right, .institution-menu .inst-menu-item-name, .institution-menu .menu-sub-list-item, .institution-reviews .inst-reviews-item-info-full {
+.index-s1 .btn-place-s-txt, .index-s1 .btn-place-s-txt-1, .index-s1 .index-menu-item span, .search-s1 .search-page-inp, .search-s1 .search-page-result-i-dist, .search-s1 .search-result-i-dist__val, .search-s1 .search-page-btn, .kitchen-s1 .kitchen-category-val, .kitchen-s1 .kitchen-category-item-count, .kitchen-s1 .kitchen-page-btn span, .kitchen-result-search .kitchen-category-val, .kitchen-result-search .kitchen-category-item-count, .kitchen-result-search .kitchen-page-btn span, .kitchen-result-search .search-page-result-i-dist, .kitchen-result-search .search-result-i-dist__val, .institution-info .inst-adr span, .institution-info .work-time-item, .institution-info .inst-kitchen-info-item, .institution-info .inst-info, .institution-menu .inst-menu-item-right, .institution-menu .inst-menu-item-name, .institution-menu .menu-sub-list-item, .institution-reviews .inst-reviews-item-info-full {
   font-family: "SFPDisplayLight"; }
 
-header .page-title, .nav-2 .nav-item span, .index-s1 .back-link, .search-s1 .search-result-i-name, .kitchen-s1 .kitchen-category-item-name, .institution-info .inst-head-name, .institution-info .work-time-item span, .institution-menu .inst-head-name, .institution-reviews .inst-head-name, .institution-reviews .inst-reviews-item-date, .institution-reviews .inst-reviews-item-info-full span, .institution-map .inst-head-name {
+header .page-title, .nav-2 .nav-item span, .index-s1 .back-link, .search-s1 .search-result-i-name, .kitchen-s1 .kitchen-category-item-name, .kitchen-result-search .kitchen-category-item-name, .kitchen-result-search .search-result-i-name, .institution-info .inst-head-name, .institution-info .work-time-item span, .institution-menu .inst-head-name, .institution-reviews .inst-head-name, .institution-reviews .inst-reviews-item-date, .institution-reviews .inst-reviews-item-info-full span, .institution-map .inst-head-name {
   font-family: "SFPDisplayMedium"; }
 
 /*
@@ -758,7 +758,7 @@ header {
     align-items: center;
     justify-content: center; }
     .search-s1 .search-result-i-logo img {
-      max-width: 28px; }
+      max-width: 30px; }
   .search-s1 .search-result-i-info {
     position: relative;
     width: 111px;
@@ -813,10 +813,18 @@ header {
     color: #ffffff;
     margin-top: 6px; }
 
+.kitchen-s1 .view-content-kitchen {
+  position: relative;
+  height: 100%; }
+
 .kitchen-s1 .container {
   position: relative;
   height: 100%; }
-  .kitchen-s1 .container:after {
+
+.kitchen-s1 .kitchen-page-result-wrapper {
+  position: relative;
+  height: 100%; }
+  .kitchen-s1 .kitchen-page-result-wrapper:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -909,6 +917,151 @@ header {
     letter-spacing: 0.38px;
     font-size: 15px;
     color: #ffffff; }
+
+.kitchen-page-result-wrapper1 {
+  height: 100%;
+  position: relative;
+  padding-bottom: 42px; }
+
+.kitchen-result-search {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
+  padding: 15px 10px 15px 10px;
+  margin: 0;
+  overflow: auto;
+  border-radius: 3px;
+  position: relative;
+  height: 100%;
+  /* Track */
+  /* Handle */ }
+  .kitchen-result-search::-webkit-scrollbar {
+    width: 2px !important; }
+  .kitchen-result-search::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important; }
+  .kitchen-result-search::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important;
+    background: #41617D !important;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important; }
+  .kitchen-result-search::-webkit-scrollbar-thumb:window-inactive {
+    background: #41617D !important; }
+  .kitchen-result-search .kitchen-category {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 7px; }
+  .kitchen-result-search .kitchen-category-val {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 15px;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    color: #757A80;
+    text-transform: uppercase; }
+  .kitchen-result-search .kitchen-category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .kitchen-result-search .kitchen-category-item-name {
+    font-size: 15px;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    color: #757A80; }
+  .kitchen-result-search .kitchen-category-item-count {
+    font-size: 15px;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    color: #757A80; }
+  .kitchen-result-search .k-r-btn-container {
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+    right: 6px; }
+  .kitchen-result-search .kitchen-page-btn {
+    width: 100%;
+    background-color: #54D6F0;
+    border-radius: 3px;
+    height: 36px;
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .kitchen-result-search .kitchen-page-btn svg {
+      width: 15.4px;
+      height: 15px;
+      margin-right: 15px;
+      fill: #ffffff; }
+    .kitchen-result-search .kitchen-page-btn span {
+      letter-spacing: 0.38px;
+      font-size: 15px;
+      color: #ffffff; }
+  .kitchen-result-search .kitchen-result-item-common {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+  .kitchen-result-search .search-page-result-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 54px; }
+    .kitchen-result-search .search-page-result-item:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: #EAECED; }
+  .kitchen-result-search .search-result-i-logo {
+    max-height: 30px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .kitchen-result-search .search-result-i-logo img {
+      max-width: 30px; }
+  .kitchen-result-search .search-result-i-info {
+    position: relative;
+    width: 111px;
+    overflow: hidden; }
+  .kitchen-result-search .search-result-i-rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    .kitchen-result-search .search-result-i-rating .star {
+      margin-right: 2px; }
+    .kitchen-result-search .search-result-i-rating .icon-svg-star {
+      width: 9px;
+      height: 9px;
+      fill: #FFC300; }
+  .kitchen-result-search .search-result-i-name {
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.14px;
+    color: #757A80; }
+  .kitchen-result-search .search-page-result-i-dist {
+    height: 30px;
+    width: 60px;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.13px;
+    color: #757A80;
+    display: flex;
+    align-items: flex-end; }
+  .kitchen-result-search .search-result-i-dist__val {
+    width: 40px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.13px;
+    color: #606060;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; }
 
 .special-offers .container {
   position: relative;

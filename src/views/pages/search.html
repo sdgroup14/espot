@@ -23,7 +23,7 @@
    <div class="search-page-result-wrapper">
       <div class="search-page-result">
        <a href="" ui-sref="cafe" class="search-page-result-item" ng-repeat="item in dataSearch"  ng-click="takePlaceId($event)" data-place-id="{{item.placeId}}">
-         <div class="search-result-i-logo"><img src="{{item.placeLogo}}" alt=""></div>
+         <div class="search-result-i-logo"><img src="img/cafe_info/logo/{{item.placeLogo}}" alt=""></div>
          <div class="search-result-i-info">
            <div class="search-result-i-rating">
              <div class="star" ng-repeat="it in getStarsCafeArr(+item.placeRate) track by $index">

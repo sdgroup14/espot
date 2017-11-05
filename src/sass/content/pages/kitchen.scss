@@ -1,7 +1,18 @@
 .kitchen-s1 {
 
+  .view-content-kitchen {
+    position: relative;
+    height: 100%;
+    // padding-bottom: 42px;
+  }
+
   .container {
     position: relative;
+    height: 100%;
+  }
+
+  .kitchen-page-result-wrapper {
+        position: relative;
     height: 100%;
     &:after {
       position: absolute;

@@ -1,0 +1,11 @@
+<div class="kitchen-page-result-wrapper">
+  <div class="kitchen-page-result">
+    <div class="kitchen-category" ng-repeat="item in dataKitchen">
+          <span class="kitchen-category-val">{{item.firstLetter}}</span>
+          <a href="" ui-sref="kitchen-result" class="kitchen-category-item" ng-repeat="i in item.items" data-kitchen-id="{{i.kitchenId}}" ng-click="reloadState1()">
+            <div class="kitchen-category-item-name">{{i.kitchenTitle}}</div>
+            <div class="kitchen-category-item-count">{{i.kitchenCount}}</div>
+          </a>
+    </div>
+  </div>
+</div>
