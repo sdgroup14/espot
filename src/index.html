@@ -12,6 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-cookies.js"></script>
   <script src="https://code.angularjs.org/1.6.5/angular-animate.min.js"></script>
+  <!-- build:remove -->
   <script src="js/app.js"></script>
   <script src="js/espot.index.js"></script>
   <script src="js/espot.search.js"></script>
@@ -25,16 +26,24 @@
   <script src="js/espot.institution-map.js"></script>
   <script src="js/espot.institution-menu.js"></script>
   <script src="js/espot.institution-reviews.js"></script>
+  <!-- /build -->
+  <!-- build:include ../templates/js-script.html -->
+  <!-- /build -->
+
   <!-- CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+
+  <!-- build:remove -->
   <link href="css/style.css" rel="stylesheet">
+  <!-- /build -->
+  <!-- build:include ../templates/css-link.html -->
+  <!-- /build -->
   <title></title>
-  <!-- <title>{{title}}</title> -->
 </head>
 
 <body>
   <div class="search_field">
-    <input id="findCity_input" class="controls" type="text" placeholder="Search Box">
+    <input id="findCity_input" class="controls" type="text" placeholder="Type city name">
   </div>
   <ng-include src="'views/templates/header.html'"></ng-include>
   <div class="view-wrap">
@@ -51,60 +60,6 @@
   <ng-include src="'views/templates/menu-2.html'"></ng-include>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA61HQMHezW5FruWR2Nor-cZPloR05K6-g&libraries=places&language=en" async="" defer=""></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
-  <script src="js/events.js"></script>
-  <script>
-  // function initAutocomplete() {
-  //   var input = document.getElementById('findCity_input');
-  //   var searchbox = new google.maps.places.SearchBox(input, { types: ['(cities)'] });
-  //   //var autocomplete = new google.maps.places.Autocomplete(input);
-  //   /*
-  //   var searchbox = new google.maps.places.Autocomplete(input, {
-  //       componentRestrictions: { country: 'fr' }
-  //   });
-  //   */
-
-
-  //   google.maps.event.addListener(searchbox, 'places_changed', function() {
-  //     var placeInfo = searchbox.getPlaces();
-
-  //     var place = new Object;
-  //     place.viewport = new Object;
-  //     place.geometry = new Object;
-  //     place.place_id = placeInfo[0].place_id;
-  //     place.vicinity = placeInfo[0].vicinity;
-  //     place.name = placeInfo[0].name;
-  //     place.formatted_address = placeInfo[0].formatted_address;
-  //     place.viewport.sw = { 'Lat': placeInfo[0].geometry.viewport.f.b, 'Lng': placeInfo[0].geometry.viewport.b.b };
-  //     place.viewport.ne = { 'Lat': placeInfo[0].geometry.viewport.f.f, 'Lng': placeInfo[0].geometry.viewport.b.f };
-  //     place.geometry.lat = placeInfo[0].geometry.location.lat();
-  //     place.geometry.lng = placeInfo[0].geometry.location.lng();
-  //     console.log(place);
-  //     $('.btn-place-s-txt').text(place.name);
-  //     $('.btn-place-next').addClass('active');
-  //     $('#findCity_input').blur();
-  //     $('.search_field').removeClass('show-search_field');
-  //     /*
-  //     var service = new google.maps.places.PlacesService(input);
-  //     var request = {
-  //       placeId: place.place_id
-  //     };
-
-  //     service.getDetails(request, getDetails);
-
-  //     function getDetails (place, status) {
-  //         console.log(place);
-  //     }
-  //     */
-  //   });
-
-
-
-  //   /*var viewport = new google.maps.LatLngBounds(
-  //       new google.maps.LatLng(southLat, westLng),
-  //       new google.maps.LatLng(northLat, eastLng)
-  //   );*/
-  // }
-  </script>
 </body>
 
 </html>
