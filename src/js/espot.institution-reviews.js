@@ -24,7 +24,7 @@
       });
 
     $timeout(function() {
-      $rootScope.pageTitle = "Отзывы";
+      $rootScope.pageTitle = "reviews";
       $('.nav-2').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
       $('.page-title').addClass('active');

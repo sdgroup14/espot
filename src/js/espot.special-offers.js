@@ -27,7 +27,7 @@
 // console.log($scope.data);
     // console.log(data.firstName);
     $timeout(function() {
-      $rootScope.pageTitle = "Специальные предложения";
+      $rootScope.pageTitle = "about";
       $('.nav-1').addClass('nav-show');
       $('.nav-2').removeClass('nav-show');
       $('.logo').addClass('start-page-logo');

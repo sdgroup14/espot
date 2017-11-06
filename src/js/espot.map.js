@@ -26,7 +26,7 @@
     // console.log(CafeIdService.getId());
     // $('#mapAll').height($('.map .container').height());
 $timeout(function() {
-      $rootScope.pageTitle = "Карта заведений";
+      $rootScope.pageTitle = "on map";
       $('.nav-2').removeClass('nav-show');
       $('.nav-1').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
@@ -66,7 +66,7 @@ $timeout(function() {
           });
         } else {
           //Если геолокация отключена назначаем стандартное местоположение
-          return initMap({ lat: 50.4474833, lng: 30.2409454 });
+          return initMap({ lat: 38.773211, lng: -9.095129 });
         }
       };
       getCoords();

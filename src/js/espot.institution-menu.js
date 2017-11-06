@@ -25,7 +25,7 @@
 
 
     $timeout(function(){
-      $rootScope.pageTitle = "Меню";
+      $rootScope.pageTitle = "menu";
       $('.nav-2').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
       $('.page-title').addClass('active');

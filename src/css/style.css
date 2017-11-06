@@ -1,7 +1,7 @@
 .index-s1 .login-header, .institution-info .inst-dist, .institution-info .act-btns span, .institution-info .inst-header span {
   font-family: "SFPDisplayBold"; }
 
-.index-s1 .btn-place-s-txt, .index-s1 .btn-place-s-txt-1, .index-s1 .index-menu-item span, .search-s1 .search-page-inp, .search-s1 .search-page-result-i-dist, .search-s1 .search-result-i-dist__val, .search-s1 .search-page-btn, .kitchen-s1 .kitchen-category-val, .kitchen-s1 .kitchen-category-item-count, .kitchen-s1 .kitchen-page-btn span, .kitchen-result-search .kitchen-category-val, .kitchen-result-search .kitchen-category-item-count, .kitchen-result-search .kitchen-page-btn span, .kitchen-result-search .search-page-result-i-dist, .kitchen-result-search .search-result-i-dist__val, .institution-info .inst-adr span, .institution-info .work-time-item, .institution-info .inst-kitchen-info-item, .institution-info .inst-info, .institution-menu .inst-menu-item-right, .institution-menu .inst-menu-item-name, .institution-menu .menu-sub-list-item, .institution-reviews .inst-reviews-item-info-full {
+.index-s1 .btn-place-s-txt, .index-s1 .btn-place-txt-before, .index-s1 .btn-place-s-txt-1, .index-s1 .index-menu-item span, .search-s1 .search-page-inp, .search-s1 .search-page-result-i-dist, .search-s1 .search-result-i-dist__val, .search-s1 .search-page-btn, .kitchen-s1 .kitchen-category-val, .kitchen-s1 .kitchen-category-item-count, .kitchen-s1 .kitchen-page-btn span, .kitchen-result-search .kitchen-category-val, .kitchen-result-search .kitchen-category-item-count, .kitchen-result-search .kitchen-page-btn span, .kitchen-result-search .search-page-result-i-dist, .kitchen-result-search .search-result-i-dist__val, .special-offers p, .institution-info .inst-adr span, .institution-info .work-time-item, .institution-info .inst-kitchen-info-item, .institution-info .inst-info, .institution-menu .inst-menu-item-right, .institution-menu .inst-menu-item-name, .institution-menu .menu-sub-list-item, .institution-reviews .inst-reviews-item-info-full {
   font-family: "SFPDisplayLight"; }
 
 header .page-title, .nav-2 .nav-item span, .index-s1 .back-link, .search-s1 .search-result-i-name, .kitchen-s1 .kitchen-category-item-name, .kitchen-result-search .kitchen-category-item-name, .kitchen-result-search .search-result-i-name, .institution-info .inst-head-name, .institution-info .work-time-item span, .institution-menu .inst-head-name, .institution-reviews .inst-head-name, .institution-reviews .inst-reviews-item-date, .institution-reviews .inst-reviews-item-info-full span, .institution-map .inst-head-name {
@@ -452,9 +452,10 @@ header {
   .nav-1 .menu-icon-svg-map-marker {
     width: 19px;
     height: 26px; }
-  .nav-1 .menu-icon-svg-heart {
-    width: 27px;
-    height: 24px; }
+  .nav-1 .menu-icon-svg-heart,
+  .nav-1 .menu-icon-svg-info-1 {
+    width: 26px;
+    height: 26px; }
   .nav-1 .menu-icon-svg-menu-btn-logo {
     width: 23px;
     height: 25px; }
@@ -566,7 +567,8 @@ header {
     border-radius: 3px;
     display: flex;
     align-items: center;
-    margin: 0 auto 20px; }
+    margin: 0 auto 20px;
+    text-align: center; }
   .index-s1 .btn-place-s-txt {
     font-size: 15px;
     letter-spacing: 0.38px;
@@ -581,12 +583,26 @@ header {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .15s ease-in-out; }
+    display: none; }
     .index-s1 .btn-place-next.active {
-      opacity: 1;
-      visibility: visible; }
+      display: flex; }
+  .index-s1 .btn-place-txt-before {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    letter-spacing: 0.38px;
+    color: #757A80;
+    text-transform: uppercase;
+    text-align: center;
+    width: 222px;
+    margin: 0 auto; }
+    .index-s1 .btn-place-txt-before span {
+      display: block;
+      line-height: 1.4; }
+      .index-s1 .btn-place-txt-before span:last-of-type {
+        font-size: 11px;
+        padding-right: 3px; }
   .index-s1 .btn-place-s-txt-1 {
     font-size: 15px;
     letter-spacing: 0.38px;
@@ -608,7 +624,7 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 5%;
+    bottom: 7%;
     font-size: 15px;
     line-height: 17px;
     letter-spacing: 0.15px;
@@ -625,7 +641,7 @@ header {
     fill: #D6D9DE;
     margin-right: 5px; }
   .index-s1 .index-menu {
-    max-width: 183px;
+    max-width: 135px;
     margin: 0 auto; }
   .index-s1 .index-menu-item {
     margin-bottom: 25px; }
@@ -658,6 +674,9 @@ header {
   .index-s1 .menu-icon-svg-heart {
     width: 36px;
     height: 32px; }
+  .index-s1 .menu-icon-svg-info-1 {
+    width: 34px;
+    height: 34px; }
 
 .search-s1 {
   position: relative; }
@@ -1082,11 +1101,27 @@ header {
 .special-offers .container {
   position: relative;
   height: 100%; }
+  .special-offers .container:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    content: '';
+    height: 45px;
+    background: -moz-linear-gradient(50% 92.62% 90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, 50% 92.62%, 50% 3.93%, color-stop(0, white), color-stop(1, rgba(255, 255, 255, 0)));
+    background: -o-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF' ,GradientType=0)";
+    background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF', GradientType=0); }
 
 .special-offers .offers-result {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#000000');
-  padding: 24px 10px 24px 18px;
+  padding: 18px 15px 25px;
   margin: 0;
   overflow: auto;
   border-radius: 3px;
@@ -1107,22 +1142,13 @@ header {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important; }
   .special-offers .offers-result::-webkit-scrollbar-thumb:window-inactive {
     background: #41617D !important; }
-  .special-offers .offers-result:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    content: '';
-    height: 70px;
-    background: -moz-linear-gradient(50% 92.62% 90deg, white 0%, rgba(255, 255, 255, 0) 100%);
-    background: -webkit-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
-    background: -webkit-gradient(linear, 50% 92.62%, 50% 3.93%, color-stop(0, white), color-stop(1, rgba(255, 255, 255, 0)));
-    background: -o-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
-    background: -ms-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF' ,GradientType=0)";
-    background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#FFFFFF' , GradientType=0); }
+
+.special-offers p {
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.15px;
+  color: #606060;
+  margin-bottom: 8px; }
 
 .institution-info .container {
   position: relative;
@@ -1534,6 +1560,26 @@ header {
 .institution-menu .icon-svg-menu-hot {
   width: 29px;
   height: 19px; }
+
+.institution-menu .icon-svg-menu-alcohol {
+  width: 14px;
+  height: 26px; }
+
+.institution-menu .icon-svg-menu-cold-drinks {
+  width: 18px;
+  height: 25px; }
+
+.institution-menu .icon-svg-menu-dessert {
+  width: 27px;
+  height: 25px; }
+
+.institution-menu .icon-svg-menu-hot-drinks {
+  width: 25px;
+  height: 25px; }
+
+.institution-menu .icon-svg-menu-salads {
+  width: 26px;
+  height: 25px; }
 
 .institution-menu .menu-sub-list {
   opacity: 0;

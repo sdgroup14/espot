@@ -22,7 +22,7 @@
       function(event) {
         $('.spinner').fadeOut(1);
       });
-    $rootScope.pageTitle = "ТИП КУХНИ";
+    $rootScope.pageTitle = "cuisine";
 
 
 

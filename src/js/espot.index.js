@@ -108,6 +108,7 @@
       console.log(place);
       $('.btn-place-s-txt').text(place.name);
       $('.btn-place-next').addClass('active');
+      $('.btn-place-txt-before').hide();
       $('#findCity_input').blur();
       $('.search_field').removeClass('show-search_field');
       /*

@@ -27,7 +27,7 @@
 
 
     $timeout(function() {
-      $rootScope.pageTitle = "Где мы находимся";
+      $rootScope.pageTitle = "map";
       $('.nav-1').removeClass('nav-show');
       $('.nav-2').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
@@ -70,7 +70,7 @@
             return initMap(startCoords); //вызов инициализацации карты
           });
         } else { //если координаты не определяются назначаем стандартные
-          return initMap({ lat: 50.4474833, lng: 30.2409454 }); //вызов инициализацации карты
+          return initMap({ lat: 38.773211, lng: -9.095129 }); //вызов инициализацации карты
         }
       };
       getCoords();

@@ -41,7 +41,7 @@
     };
 
     $timeout(function() {
-      $rootScope.pageTitle = "поиск";
+      $rootScope.pageTitle = "search";
       $('.nav-2').removeClass('nav-show');
       $('.nav-1').addClass('nav-show');
       $('.logo').addClass('start-page-logo');

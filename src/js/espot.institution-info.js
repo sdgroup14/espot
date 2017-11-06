@@ -25,7 +25,7 @@
     $('.back-btn-general').attr('href', $cookies.get("backLinkHref"));
 
     $timeout(function() {
-      $rootScope.pageTitle = "О ЗАВЕДЕНИИ";
+      $rootScope.pageTitle = "main information";
       $('.nav-1').removeClass('nav-show');
       $('.nav-2').addClass('nav-show');
       $('.logo').addClass('start-page-logo');
