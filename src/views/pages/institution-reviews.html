@@ -21,7 +21,7 @@
         <div class="inst-reviews-item-info">
           <div class="inst-reviews-item-date">{{comment.userDate}}</div>
           <div class="inst-reviews-item-rating">
-            <div class="star" ng-repeat="it in getStarsCafeArr(+comment.useruserRate) track by $index">
+            <div class="star" ng-repeat="it in getStarsCafeArr(+comment.userRate) track by $index">
               <svg class="icon-svg-star">
                 <use xlink:href="img/sprite.svg#star" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
