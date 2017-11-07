@@ -57,9 +57,9 @@
       url: 'https://api.icreations.agency/comments'
     }).then(function(response) {
       $scope.dataComments = response.data;
-      console.log($scope.dataComments);
-       $scope.starsNum = $scope.dataSearch.placeRate;
-      console.log(response.data);
+      // console.log($scope.dataComments);
+       // $scope.starsNum = $scope.dataSearch.placeRate;
+      // console.log(response.data);
       $scope.getStarsCafeArr = Array;
     }, function(error) {
       console.log(error);

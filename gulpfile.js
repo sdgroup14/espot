@@ -24,7 +24,9 @@ var gulp = require('gulp'),
   svgmin = require('gulp-svgmin'),
   cheerio = require('gulp-cheerio'),
   replace = require('gulp-replace'),
-  notifier = require('node-notifier');
+  notifier = require('node-notifier'),
+  concatCss = require('gulp-concat-css'),
+  cleanCSS = require('gulp-clean-css');
 
 gulp.task('sass', function() {
   gulp.src('src/sass/style.scss')
@@ -50,22 +52,29 @@ gulp.task('del', function() {
 });
 
 gulp.task('concat-css-libs', function() {
+  // return gulp.src('src/css/libs/*.css')
+  //   .pipe(concat('libs.min.css', { newLine: ';' }))
+  //   .pipe(gulp.dest('src/css/libs/'));
+
   return gulp.src('src/css/libs/*.css')
-    .pipe(concat('libs.min.css', { newLine: '\n' }))
+    .pipe(concatCss('libs.min.css'))
     .pipe(gulp.dest('src/css/libs/'));
 });
 
 
 gulp.task('concat-js', function() {
-  return gulp.src(['src/js/lib/modules/*.js', 'src/js/lib/*.js', 'src/js/*.js'])
+  return gulp.src(['src/js/libs/*.js', 'src/js/libs/modules/*.js', 'src/js/*.js'])
     .pipe(concat('scripts.min.js', { newLine: '\n' }))
     .pipe(gulp.dest('src/js/'));
 });
 
 
 gulp.task('concat-all-css', function() {
-  return gulp.src(['src/css/libs/libs.min.css', 'src/css/style.css'])
-    .pipe(concat('style.min.css', { newLine: '\n' }))
+  // return gulp.src(['src/css/libs/libs.min.css', 'src/css/style.css'])
+  //   .pipe(concat('style.min.css', { newLine: ';' }))
+  //   .pipe(gulp.dest('src/css/'));
+   return gulp.src(['src/css/libs/libs.min.css', 'src/css/style.css'])
+    .pipe(concatCss("style.min.css"))
     .pipe(gulp.dest('src/css/'));
 });
 
@@ -97,7 +106,7 @@ gulp.task('autoprefixer', () =>
 gulp.task('csso', function() {
   return gulp.src('src/css/style.min.css')
     .pipe(csso({
-      restructure: true,
+      restructure: false,
       debug: true
     }))
     .pipe(gulp.dest('dist/css/'));
@@ -127,13 +136,20 @@ gulp.task('uglify', function() {
 });
 
 
-gulp.task('uncss', function() {
-  return gulp.src('src/css/libs/libs.min.css')
-    .pipe(uncss({
-      html: ['src/index.php', 'src/views/**/**/*.php']
-    }))
-    .pipe(gulp.dest('src/css/libs/'));
+// gulp.task('uncss', function() {
+//   return gulp.src('dist/css/style.min.css')
+//     .pipe(uncss({
+//       html: ['src/index.html', 'src/views/*.html', 'src/views/pages/*.html', 'src/views/templates/*.html', 'src/views/templates/*.html']
+//     }))
+//     .pipe(gulp.dest('dist/css/'));
+// });
+
+gulp.task('clean-css', function() {
+    return gulp.src('dist/css/style.min.css')
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('dist/css/'));
 });
+
 
 
 gulp.task('sprite', function() {
@@ -201,7 +217,7 @@ gulp.task('processhtml', function() {
 
 
 gulp.task('prod', function(cb) {
-  runSequence('del', ['concat-css-libs', 'copy', 'autoprefixer'], ['concat-js', 'concat-all-css'], ['csso', 'imagemin', 'uglify', 'processhtml'], function() {
+  runSequence('del', ['concat-css-libs', 'copy', 'autoprefixer'], ['concat-js', 'concat-all-css'], ['csso', 'imagemin', 'uglify', 'processhtml'],['clean-css'], function() {
     return gulp.src('')
       .pipe(notify("Done"));
   });
