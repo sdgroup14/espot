@@ -1,3 +1,5 @@
+
+
 var gulp = require('gulp'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -83,11 +85,9 @@ gulp.task('copy', function() {
   return gulp
     .src([
       '*.php',
-      '*.html',
       'fonts/**',
       'views/**',
       'video/**',
-      'json/**',
       'img/*.svg'
     ], { cwd: 'src' })
     .pipe(gulpCopy('dist/'));
