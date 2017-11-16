@@ -1033,6 +1033,22 @@ body {
   position: relative;
 }
 
+@media all and (min-width: 980px) {
+  body {
+    max-width: 320px;
+    max-height: 60vh;
+    margin: 3vh auto 3vh;
+  }
+
+  .pac-container {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    left: 3px !important;
+    right: 3px !important;
+    top: 60px !important;
+  }
+}
+
 section {
   width: 100%;
   position: relative;
@@ -1662,6 +1678,7 @@ header .logo.start-page-logo {
   justify-content: center;
   margin: 0 auto;
   display: none;
+  cursor: pointer;
 }
 
 .index-s1 .btn-place-next.active {
